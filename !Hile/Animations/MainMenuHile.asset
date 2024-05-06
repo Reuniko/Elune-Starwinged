@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: MainMenuHile
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Clothes
+    icon: {fileID: 2800000, guid: 17c9e75dcf18d804f833035b8054d150, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 0cb2cc21155768a43b975baabe3f1512, type: 2}
+    subParameters: []
+    labels: []
+  - name: Accessories
+    icon: {fileID: 2800000, guid: b314deb634940d34b99cf67fa88320a8, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 11400000, guid: 3b77fddbb22152247b3b2d3e5a8486f1, type: 2}
+    subParameters:
+    - name: 
+    labels: []
+  - name: Species
+    icon: {fileID: 2800000, guid: 5b4144c2122d23b4c8fbdc47e82ef59f, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 656242af573546144966b3b01821aa37, type: 2}
+    subParameters: []
+    labels: []
+  - name: Hair and Body
+    icon: {fileID: 2800000, guid: 7eba437b86694d540884262192bee714, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 11400000, guid: 8145046719efd9e4a8e22a722c38d9e7, type: 2}
+    subParameters:
+    - name: 
+    labels: []
+  - name: Colors
+    icon: {fileID: 2800000, guid: 8382a4267faca714bab447bb91aadb2a, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 11400000, guid: 11ce1029baeb42b4f85a403b6288ee9f, type: 2}
+    subParameters: []
+    labels: []
+  - name: Teddy
+    icon: {fileID: 2800000, guid: 6d8921ba9f9cf344e93bb97f81c5088a, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 11400000, guid: 821d245f449997c4da673ec881cc6f45, type: 2}
+    subParameters:
+    - name: 
+    labels: []
+  - name: Other Stuff
+    icon: {fileID: 2800000, guid: 1943035365fa0b04abe43ffd475e4a3a, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 7fc8530f11b83a240bef0a0cd82845d6, type: 2}
+    subParameters: []
+    labels: []
+  - name: Locomotion
+    icon: {fileID: 2800000, guid: 44b822c693fbd174d8f994ee312dd8e4, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: d5ae14c463b6b494494c2f5064089632, type: 2}
+    subParameters: []
+    labels: []

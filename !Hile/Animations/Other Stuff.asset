@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Other Stuff
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Particles off
+    icon: {fileID: 2800000, guid: 2af6d84bb5eb27746916aba0244b6fb2, type: 3}
+    type: 102
+    parameter:
+      name: Particles
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Sounds off
+    icon: {fileID: 2800000, guid: c555b4bf5f9ef4b46b9bfccbb102749e, type: 3}
+    type: 102
+    parameter:
+      name: AllSounds
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Fist expression off
+    icon: {fileID: 2800000, guid: 37680b0dd27875b46a62f8432adf7518, type: 3}
+    type: 102
+    parameter:
+      name: FistEmpty
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Lock Expression, not fingers
+    icon: {fileID: 2800000, guid: e155cb1a75f01cd478885504a01f7644, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: c4f005f454d03564c8f52cd977fb0bf5, type: 2}
+    subParameters: []
+    labels: []
+  - name: Interactions Off
+    icon: {fileID: 2800000, guid: 37680b0dd27875b46a62f8432adf7518, type: 3}
+    type: 102
+    parameter:
+      name: Interactions
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Max Brightness
+    icon: {fileID: 2800000, guid: 0a0fb16511b9c9a42a53210ca8d798f8, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: MaxBrightness
+    labels: []
+  - name: Min Brightness
+    icon: {fileID: 2800000, guid: 36eecc38ec7fd1343b5c17d1dd47882f, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: MinBrightness
+    labels: []

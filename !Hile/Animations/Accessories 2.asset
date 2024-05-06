@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Accessories 2
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Ring
+    icon: {fileID: 2800000, guid: 2bdb3ab9566f65d419b4edb7de97ad33, type: 3}
+    type: 102
+    parameter:
+      name: Ring
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Tail Charm
+    icon: {fileID: 2800000, guid: 59a95098086070445b28835b655b7cc3, type: 3}
+    type: 102
+    parameter:
+      name: TailAcc
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Bell Charm
+    icon: {fileID: 2800000, guid: 93a96e4cedb83d94a88edbcb7a37a103, type: 3}
+    type: 102
+    parameter:
+      name: BellAcc
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Hair Clips
+    icon: {fileID: 2800000, guid: 691ad85c8dac0f34583183462483f4b4, type: 3}
+    type: 102
+    parameter:
+      name: HairClips
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Bell Hair Ribbons
+    icon: {fileID: 2800000, guid: d8fb963bf2e889748b4aa4f910de6132, type: 3}
+    type: 102
+    parameter:
+      name: BellBows
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Accessories
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Lights
+    icon: {fileID: 2800000, guid: 55395561c6590fd47b4396af769602e4, type: 3}
+    type: 102
+    parameter:
+      name: Lights
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Glasses
+    icon: {fileID: 2800000, guid: 515486af2c5ac2a43a98fd2fdc8f53af, type: 3}
+    type: 102
+    parameter:
+      name: Glasses
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Glasses up/down
+    icon: {fileID: 2800000, guid: bf8f1bb0351bff54791768b652dd140d, type: 3}
+    type: 102
+    parameter:
+      name: GlassesPlace
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Star Necklace
+    icon: {fileID: 2800000, guid: 71f6cdb51d1ac5942bb300c80647866e, type: 3}
+    type: 102
+    parameter:
+      name: StarNecklace
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Heart Necklace
+    icon: {fileID: 2800000, guid: f05826fe2c694c441a675a75f64b6016, type: 3}
+    type: 102
+    parameter:
+      name: HeartNecklace
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Metal Gold/SIlver
+    icon: {fileID: 2800000, guid: 54756e3243001604788d1e16aafda763, type: 3}
+    type: 102
+    parameter:
+      name: Metal
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Gingerbread
+    icon: {fileID: 2800000, guid: 2e4d2836d5a62c14e9c07a447a89e220, type: 3}
+    type: 102
+    parameter:
+      name: Gingerbread
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Page 2
+    icon: {fileID: 2800000, guid: a93ec1e3a80896247a51775eb23d7d68, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 433612c119cc1f444b7ec30bec9fbac7, type: 2}
+    subParameters: []
+    labels: []

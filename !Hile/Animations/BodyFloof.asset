@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: BodyFloof
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Face Floof
+    icon: {fileID: 2800000, guid: 93765ed0617fa1449a780460ac843ecb, type: 3}
+    type: 102
+    parameter:
+      name: FaceFloof
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Neck Floof
+    icon: {fileID: 2800000, guid: ef17bc2f6482c8743a3164e130d5f938, type: 3}
+    type: 102
+    parameter:
+      name: NeckFluff
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Chest Floof
+    icon: {fileID: 2800000, guid: e2a10e25364f5d349a2580f2a996872d, type: 3}
+    type: 102
+    parameter:
+      name: ChestFluff
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Arm Floof
+    icon: {fileID: 2800000, guid: 2bbd42d8e280e0a40a4c272d21ea6e00, type: 3}
+    type: 102
+    parameter:
+      name: ArmFluff
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Hip Floof
+    icon: {fileID: 2800000, guid: 82d5616c90a0eb44d9a7803e92ddb94e, type: 3}
+    type: 102
+    parameter:
+      name: HipFluff
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Leg Floof
+    icon: {fileID: 2800000, guid: 6f5a4f0164276d144ab79995f8b36be1, type: 3}
+    type: 102
+    parameter:
+      name: LegFluff
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Ankle Floof
+    icon: {fileID: 2800000, guid: af48095e858b8c1418a29c520596f53a, type: 3}
+    type: 102
+    parameter:
+      name: AnkleFloof
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

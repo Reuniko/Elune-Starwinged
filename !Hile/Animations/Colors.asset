@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Colors
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Hue Eyes
+    icon: {fileID: 2800000, guid: c53ad58bb6bd27442be4a89836ca1729, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: EyeHue
+    labels: []
+  - name: Saturation Eyes
+    icon: {fileID: 2800000, guid: a48923ab15a77284bb3b5c38162631d3, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: EyeSaturation
+    labels: []
+  - name: Fur Hue
+    icon: {fileID: 2800000, guid: ae033cb32a52ae64e9788cc29266294c, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: SkinShade
+    labels: []
+  - name: Fur Saturation
+    icon: {fileID: 2800000, guid: 94f33916c1f5ab14f8bc9986f057eca8, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: SkinSat
+    labels: []
+  - name: Lights Hue
+    icon: {fileID: 2800000, guid: 5f3bd6b0f53271040b6f010176188273, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: LightHue
+    labels: []
+  - name: Lights Blinking
+    icon: {fileID: 2800000, guid: 8df3222a388efd442b776ae5f0e2097d, type: 3}
+    type: 102
+    parameter:
+      name: LightBlink
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Plain Slippers Hue
+    icon: {fileID: 2800000, guid: c823fcc87a714604ca56288e0041ae6f, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: SlippersHue
+    labels: []
+  - name: Clothes Colors
+    icon: {fileID: 2800000, guid: 8382a4267faca714bab447bb91aadb2a, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 11400000, guid: 4826327f410196746894ef00deb6ac1a, type: 2}
+    subParameters:
+    - name: 
+    labels: []

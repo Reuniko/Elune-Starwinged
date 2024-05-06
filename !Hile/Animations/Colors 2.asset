@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Colors 2
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Sweater Texture
+    icon: {fileID: 2800000, guid: 8cb4ebadb995c7340aa45ca72f543bcd, type: 3}
+    type: 102
+    parameter:
+      name: SweaterMat
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Sweter Set Hue
+    icon: {fileID: 2800000, guid: 66e732b245517ed4599bdbed82e99473, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: SweaterSetHue
+    labels: []
+  - name: Accessories Hue
+    icon: {fileID: 2800000, guid: 8fe2f97ac8abeda4daf78b1e8e2cc1a9, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: AccHue
+    labels: []
+  - name: PJ Set Hue
+    icon: {fileID: 2800000, guid: 470fd5c548d01b348ba9cbda384385e4, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: PJSetHue
+    labels: []
+  - name: PJ Pants Hue
+    icon: {fileID: 2800000, guid: 386f485796ab9114f8bf89b8922a5e71, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 0
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: PJPantsHue
+    labels: []
+  - name: PJ Pants 1
+    icon: {fileID: 2800000, guid: e8567c4c9cbba4c41b8af6f80e8c6572, type: 3}
+    type: 102
+    parameter:
+      name: PJPantsColor
+    value: 0
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: PJ Pants 2
+    icon: {fileID: 2800000, guid: 07d56a96a8dac274d8a151a2c2aadf40, type: 3}
+    type: 102
+    parameter:
+      name: PJPantsColor
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: PJ Pants 3
+    icon: {fileID: 2800000, guid: 842c67c80d4c33549a39406aca90a1e3, type: 3}
+    type: 102
+    parameter:
+      name: PJPantsColor
+    value: 2
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
