@@ -44,16 +44,16 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/4a8cc301c1077fe4d8c36274a
 		[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _ClippingMaskUV ("UV", Int) = 0
 		[HideInInspector][ToggleUI]_Inverse_Clipping ("Invert", Float) = 0
 		_Cutoff ("Alpha Cutoff", Range(0, 1.001)) = 0.5
-		[HideInInspector] m_start_MainHueShift_Cat ("Color Adjust--{reference_property:_MainColorAdjustToggle,button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/color-and-normals/color-adjust},hover:Documentation}}", Float) = 0
+		[HideInInspector] m_start_MainHueShift ("Color Adjust--{reference_property:_MainColorAdjustToggle,button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/color-and-normals/color-adjust},hover:Documentation}}", Float) = 0
 		[HideInInspector][ThryToggle(COLOR_GRADING_HDR)] _MainColorAdjustToggle ("Adjust Colors", Float) = 0
 		[sRGBWarning][ThryRGBAPacker(R Hue Mask, G Brightness Mask, B Saturation Mask)]_MainColorAdjustTexture ("Mask (Expand)--{reference_properties:[_MainColorAdjustTexturePan, _MainColorAdjustTextureUV]}", 2D) = "white" { }
 		[HideInInspector][Vector2]_MainColorAdjustTexturePan ("Panning", Vector) = (0, 0, 0, 0)
 		[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _MainColorAdjustTextureUV ("UV", Int) = 0
-		_Saturation_Cat ("Saturation", Range(-1, 10)) = 0
+		_Saturation ("Saturation", Range(-1, 10)) = 0
 		_MainBrightness ("Brightness", Range(-1, 1)) = 0
 		[ThryToggleUI(true)] _MainHueShiftToggle ("<size=13><b>  Hue Shift</b></size>", Float) = 0
 		[ToggleUI]_MainHueShiftReplace ("Hue Replace?--{condition_showS:(_MainHueShiftToggle==1)}", Float) = 1
-		_MainHueShift_Cat ("Hue Shift--{condition_showS:(_MainHueShiftToggle==1)}", Range(0, 1)) = 0
+		_MainHueShift ("Hue Shift--{condition_showS:(_MainHueShiftToggle==1)}", Range(0, 1)) = 0
 		_MainHueShiftSpeed ("Hue Shift Speed--{condition_showS:(_MainHueShiftToggle==1)}", Float) = 0
 		[Space(4)]
 		[ThryToggleUI(true)]_MainHueALCTEnabled ("<size=13><b>  Hue Shift Audio Link</b></size>--{condition_showS:(_MainHueShiftToggle==1 && _EnableAudioLink==1)}", Float) = 0
@@ -68,7 +68,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/4a8cc301c1077fe4d8c36274a
 		[ThryWideEnum(Off, 0, 1R, 1, 1G, 2, 1B, 3, 1A, 4, 2R, 5, 2G, 6, 2B, 7, 2A, 8, 3R, 9, 3G, 10, 3B, 11, 3A, 12, 4R, 13, 4G, 14, 4B, 15, 4A, 16)] _MainBrightnessGlobalMask ("Brightness--{reference_property:_MainBrightnessGlobalMaskBlendType}", Int) = 0
 		[HideInInspector][ThryWideEnum(Replace, 0, Darken, 1, Multiply, 2, Color Burn, 3, Linear Burn, 4, Lighten, 5, Screen, 6, Color Dodge, 7, Linear Dodge(Add), 8, Overlay, 9, Soft Lighten, 10, Hard Light, 11, Vivid Light, 12, Linear Light, 13, Pin Light, 14, Hard Mix, 15, Difference, 16, Exclusion, 17, Subtract, 18, Divide, 19)] _MainBrightnessGlobalMaskBlendType ("Blending", Int) = 2
 		[HideInInspector] m_end_MainHueShiftGlobalMask ("Global Mask", Float) = 0
-		[HideInInspector] m_end_MainHueShift_Cat ("Hue Shift", Float) = 0
+		[HideInInspector] m_end_MainHueShift ("Hue Shift", Float) = 0
 		[HideInInspector] m_start_Alpha ("Alpha Options--{button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/color-and-normals/alpha-options},hover:Documentation}}", Float) = 0
 		[ToggleUI]_AlphaForceOpaque ("Force Opaque", Float) = 0
 		_AlphaMod ("Alpha Mod", Range(-1, 1)) = 0.0
@@ -766,9 +766,9 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/4a8cc301c1077fe4d8c36274a
 			float _MainColorAdjustTextureUV;
 			float _MainHueShiftToggle;
 			float _MainHueShiftReplace;
-			float _MainHueShift_Cat;
+			float _MainHueShift;
 			float _MainHueShiftSpeed;
-			float _Saturation_Cat;
+			float _Saturation;
 			float _MainBrightness;
 			float _MainHueALCTEnabled;
 			float _MainALHueShiftBand;
@@ -3618,7 +3618,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/4a8cc301c1077fe4d8c36274a
 				}
 				if ((1.0 /*_MainHueShiftToggle*/))
 				{
-					float shift = _MainHueShift_Cat;
+					float shift = _MainHueShift;
 					#ifdef POI_AUDIOLINK
 					if (poiMods.audioLinkAvailable && (0.0 /*_MainHueALCTEnabled*/))
 					{
@@ -3634,7 +3634,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/4a8cc301c1077fe4d8c36274a
 						poiFragData.baseColor = hueShift(poiFragData.baseColor, frac((shift - (1 - hueShiftAlpha.r) + (0.0 /*_MainHueShiftSpeed*/) * _Time.x)));
 					}
 				}
-				poiFragData.baseColor = lerp(poiFragData.baseColor, dot(poiFragData.baseColor, float3(0.3, 0.59, 0.11)), -(_Saturation_Cat) * hueShiftAlpha.b);
+				poiFragData.baseColor = lerp(poiFragData.baseColor, dot(poiFragData.baseColor, float3(0.3, 0.59, 0.11)), -(_Saturation) * hueShiftAlpha.b);
 				poiFragData.baseColor = saturate(poiFragData.baseColor + (0.0 /*_MainBrightness*/) * hueShiftAlpha.g);
 				#endif
 				#if defined(PROP_CLIPPINGMASK) || !defined(OPTIMIZER_ENABLED)
@@ -3930,9 +3930,9 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/4a8cc301c1077fe4d8c36274a
 			float _MainColorAdjustTextureUV;
 			float _MainHueShiftToggle;
 			float _MainHueShiftReplace;
-			float _MainHueShift_Cat;
+			float _MainHueShift;
 			float _MainHueShiftSpeed;
-			float _Saturation_Cat;
+			float _Saturation;
 			float _MainBrightness;
 			float _MainHueALCTEnabled;
 			float _MainALHueShiftBand;
@@ -6581,7 +6581,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/4a8cc301c1077fe4d8c36274a
 				}
 				if ((1.0 /*_MainHueShiftToggle*/))
 				{
-					float shift = _MainHueShift_Cat;
+					float shift = _MainHueShift;
 					#ifdef POI_AUDIOLINK
 					if (poiMods.audioLinkAvailable && (0.0 /*_MainHueALCTEnabled*/))
 					{
@@ -6597,7 +6597,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/4a8cc301c1077fe4d8c36274a
 						poiFragData.baseColor = hueShift(poiFragData.baseColor, frac((shift - (1 - hueShiftAlpha.r) + (0.0 /*_MainHueShiftSpeed*/) * _Time.x)));
 					}
 				}
-				poiFragData.baseColor = lerp(poiFragData.baseColor, dot(poiFragData.baseColor, float3(0.3, 0.59, 0.11)), -(_Saturation_Cat) * hueShiftAlpha.b);
+				poiFragData.baseColor = lerp(poiFragData.baseColor, dot(poiFragData.baseColor, float3(0.3, 0.59, 0.11)), -(_Saturation) * hueShiftAlpha.b);
 				poiFragData.baseColor = saturate(poiFragData.baseColor + (0.0 /*_MainBrightness*/) * hueShiftAlpha.g);
 				#endif
 				#if defined(PROP_CLIPPINGMASK) || !defined(OPTIMIZER_ENABLED)
@@ -6814,9 +6814,9 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/4a8cc301c1077fe4d8c36274a
 			float _MainColorAdjustTextureUV;
 			float _MainHueShiftToggle;
 			float _MainHueShiftReplace;
-			float _MainHueShift_Cat;
+			float _MainHueShift;
 			float _MainHueShiftSpeed;
-			float _Saturation_Cat;
+			float _Saturation;
 			float _MainBrightness;
 			float _MainHueALCTEnabled;
 			float _MainALHueShiftBand;
@@ -8284,7 +8284,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/4a8cc301c1077fe4d8c36274a
 				}
 				if ((1.0 /*_MainHueShiftToggle*/))
 				{
-					float shift = _MainHueShift_Cat;
+					float shift = _MainHueShift;
 					#ifdef POI_AUDIOLINK
 					if (poiMods.audioLinkAvailable && (0.0 /*_MainHueALCTEnabled*/))
 					{
@@ -8300,7 +8300,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/4a8cc301c1077fe4d8c36274a
 						poiFragData.baseColor = hueShift(poiFragData.baseColor, frac((shift - (1 - hueShiftAlpha.r) + (0.0 /*_MainHueShiftSpeed*/) * _Time.x)));
 					}
 				}
-				poiFragData.baseColor = lerp(poiFragData.baseColor, dot(poiFragData.baseColor, float3(0.3, 0.59, 0.11)), -(_Saturation_Cat) * hueShiftAlpha.b);
+				poiFragData.baseColor = lerp(poiFragData.baseColor, dot(poiFragData.baseColor, float3(0.3, 0.59, 0.11)), -(_Saturation) * hueShiftAlpha.b);
 				poiFragData.baseColor = saturate(poiFragData.baseColor + (0.0 /*_MainBrightness*/) * hueShiftAlpha.g);
 				#endif
 				#if defined(PROP_CLIPPINGMASK) || !defined(OPTIMIZER_ENABLED)

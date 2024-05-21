@@ -57,9 +57,9 @@ Material:
     _GlitterMinBrightnessAnimated: 1
     _LightingCapAnimated: 1
     _LightingMinLightBrightnessAnimated: 1
-    _MainHueShiftAnimated: 2
+    _MainHueShiftAnimated: 1
     _MatcapHueShiftAnimated: 1
-    _SaturationAnimated: 2
+    _SaturationAnimated: 1
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
