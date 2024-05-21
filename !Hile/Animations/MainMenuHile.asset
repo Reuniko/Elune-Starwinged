@@ -13,14 +13,34 @@ MonoBehaviour:
   m_Name: MainMenuHile
   m_EditorClassIdentifier: 
   controls:
-  - name: Clothes
-    icon: {fileID: 2800000, guid: 17c9e75dcf18d804f833035b8054d150, type: 3}
+  - name: GoGoGo
+    icon: {fileID: 2800000, guid: 8d77f82d323ffc043915b224d21e1be8, type: 3}
     type: 103
     parameter:
       name: 
     value: 1
     style: 0
-    subMenu: {fileID: 11400000, guid: 0cb2cc21155768a43b975baabe3f1512, type: 2}
+    subMenu: {fileID: 11400000, guid: f3678c76d3dd4aa4a9ffd5701237b9e7, type: 2}
+    subParameters: []
+    labels: []
+  - name: GoGoLoco
+    icon: {fileID: 2800000, guid: 82ab53a641de2f1448023168217721eb, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: d5ae14c463b6b494494c2f5064089632, type: 2}
+    subParameters: []
+    labels: []
+  - name: Fly
+    icon: {fileID: 2800000, guid: 52189a4a87d9eed4d974106bb9f1ce33, type: 3}
+    type: 102
+    parameter:
+      name: VRCEmote
+    value: 123
+    style: 0
+    subMenu: {fileID: 11400000, guid: 821d245f449997c4da673ec881cc6f45, type: 2}
     subParameters: []
     labels: []
   - name: Accessories
@@ -31,8 +51,7 @@ MonoBehaviour:
     value: 0
     style: 0
     subMenu: {fileID: 11400000, guid: 3b77fddbb22152247b3b2d3e5a8486f1, type: 2}
-    subParameters:
-    - name: 
+    subParameters: []
     labels: []
   - name: Species
     icon: {fileID: 2800000, guid: 5b4144c2122d23b4c8fbdc47e82ef59f, type: 3}
@@ -52,8 +71,7 @@ MonoBehaviour:
     value: 0
     style: 0
     subMenu: {fileID: 11400000, guid: 8145046719efd9e4a8e22a722c38d9e7, type: 2}
-    subParameters:
-    - name: 
+    subParameters: []
     labels: []
   - name: Colors
     icon: {fileID: 2800000, guid: 8382a4267faca714bab447bb91aadb2a, type: 3}
@@ -65,17 +83,6 @@ MonoBehaviour:
     subMenu: {fileID: 11400000, guid: 11ce1029baeb42b4f85a403b6288ee9f, type: 2}
     subParameters: []
     labels: []
-  - name: Teddy
-    icon: {fileID: 2800000, guid: 6d8921ba9f9cf344e93bb97f81c5088a, type: 3}
-    type: 103
-    parameter:
-      name: 
-    value: 0
-    style: 0
-    subMenu: {fileID: 11400000, guid: 821d245f449997c4da673ec881cc6f45, type: 2}
-    subParameters:
-    - name: 
-    labels: []
   - name: Other Stuff
     icon: {fileID: 2800000, guid: 1943035365fa0b04abe43ffd475e4a3a, type: 3}
     type: 103
@@ -84,15 +91,5 @@ MonoBehaviour:
     value: 1
     style: 0
     subMenu: {fileID: 11400000, guid: 7fc8530f11b83a240bef0a0cd82845d6, type: 2}
-    subParameters: []
-    labels: []
-  - name: Locomotion
-    icon: {fileID: 2800000, guid: 44b822c693fbd174d8f994ee312dd8e4, type: 3}
-    type: 103
-    parameter:
-      name: 
-    value: 1
-    style: 0
-    subMenu: {fileID: 11400000, guid: d5ae14c463b6b494494c2f5064089632, type: 2}
     subParameters: []
     labels: []

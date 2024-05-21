@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Puppy
-  m_Shader: {fileID: 4800000, guid: 36cf6eae471ca3a43b168e04424b1e9f, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0b5f5baf2dacd6d49a13a1473719a301, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -16,7 +16,6 @@ Material:
   - COLOR_GRADING_HDR
   - POI_ENVIRORIM
   - POI_MATCAP0
-  - POI_UDIMDISCARD
   - VIGNETTE_MASKED
   - _EMISSION
   - _LIGHTINGMODE_FLAT
@@ -29,10 +28,10 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
-    AllLockedGUIDS: 65fe9862c6841ae44b7ad8ac09a78feb,8e82215917bb4354d9bd4d50ef0a871d
-    OriginalKeywords: COLOR_GRADING_HDR POI_ENVIRORIM POI_MATCAP0 POI_UDIMDISCARD
-      VIGNETTE_MASKED _EMISSION _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI
-      _STOCHASTICMODE_DELIOT_HEITZ _SUNDISK_SIMPLE
+    AllLockedGUIDS: 8e82215917bb4354d9bd4d50ef0a871d,65fe9862c6841ae44b7ad8ac09a78feb
+    OriginalKeywords: COLOR_GRADING_HDR POI_ENVIRORIM POI_MATCAP0 VIGNETTE_MASKED
+      _EMISSION _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
+      _SUNDISK_SIMPLE
     OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Toon Outline
     RenderType: TransparentCutout
     _EmissionStrengthAnimated: 1
@@ -53,7 +52,7 @@ Material:
     _UDIMDiscardRow2_2Animated: 1
     _UDIMDiscardRow2_3Animated: 1
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _EnableOutlines
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -1247,7 +1246,7 @@ Material:
     - _EnableRim2Lighting: 0
     - _EnableRimLighting: 0
     - _EnableTouchGlow: 0
-    - _EnableUDIMDiscardOptions: 1
+    - _EnableUDIMDiscardOptions: 0
     - _EnableVolumeColor: 0
     - _FFBFOutlineStencilHelp0: 0
     - _FFBFOutlineStencilHelp1: 0
@@ -2492,7 +2491,7 @@ Material:
     - g_start_deliot: 0
     - g_start_hextile: 0
     - m_AudioLinkCategory: 0
-    - m_OutlineCategory: 1
+    - m_OutlineCategory: 0
     - m_end_ALDecalSpectrum: 0
     - m_end_ALVolumeColor: 0
     - m_end_Alpha: 0
@@ -2629,12 +2628,12 @@ Material:
     - m_end_vertexGlitching: 0
     - m_end_vertexManipulation: 0
     - m_end_videoEffects: 0
-    - m_lightingCategory: 1
+    - m_lightingCategory: 0
     - m_mainCategory: 1
     - m_modifierCategory: 0
     - m_postprocessing: 0
     - m_renderingCategory: 1
-    - m_specialFXCategory: 1
+    - m_specialFXCategory: 0
     - m_start_ALDecalSpectrum: 0
     - m_start_ALVolumeColor: 0
     - m_start_Alpha: 0

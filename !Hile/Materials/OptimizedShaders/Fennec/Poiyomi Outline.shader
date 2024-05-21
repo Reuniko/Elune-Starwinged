@@ -385,28 +385,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
 		[VectorLabel(Min, Max)]_AudioLinkOutlineEmission ("Emission Mod", Vector) = (0, 0, 0, 0)
 		[HideInInspector] m_end_OutlineAudioLink ("Audio Link", Float) = 0
 		[HideInInspector] m_specialFXCategory ("Special FX", Float) = 0
-		[HideInInspector] m_start_udimdiscardOptions ("UV Tile Discard--{reference_property:_EnableUDIMDiscardOptions,button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/special-fx/udim-discard},hover:Documentation}}", Float) = 0
-		[HideInInspector][ThryToggle(POI_UDIMDISCARD)]_EnableUDIMDiscardOptions ("Enable UDIM Discard Options", Float) = 0
-		[Helpbox(1)]_UDIMDiscardHelpbox ("UV Tile Discard requires special model setup. Place object UVs on different UV Tiles.", Int) = 0
-		[ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3)]_UDIMDiscardUV ("Discard UV", Int) = 0
-		[Enum(Vertex (Faster), 0, Pixel (Slower), 1)] _UDIMDiscardMode ("Discard Mode", Int) = 0
-		[ThryMultiFloats(true, _UDIMDiscardRow3_1, _UDIMDiscardRow3_2, _UDIMDiscardRow3_3)] _UDIMDiscardRow3_0("v = 3", Float) = 0
-		[HideInInspector] _UDIMDiscardRow3_1("", Float) = 0
-		[HideInInspector] _UDIMDiscardRow3_2("", Float) = 0
-		[HideInInspector] _UDIMDiscardRow3_3("", Float) = 0
-		[ThryMultiFloats(true, _UDIMDiscardRow2_1, _UDIMDiscardRow2_2, _UDIMDiscardRow2_3)] _UDIMDiscardRow2_0("v = 2", Float) = 0
-		[HideInInspector] _UDIMDiscardRow2_1("", Float) = 0
-		[HideInInspector] _UDIMDiscardRow2_2("", Float) = 0
-		[HideInInspector] _UDIMDiscardRow2_3("", Float) = 0
-		[ThryMultiFloats(true, _UDIMDiscardRow1_1, _UDIMDiscardRow1_2, _UDIMDiscardRow1_3)] _UDIMDiscardRow1_0("v = 1", Float) = 0
-		[HideInInspector] _UDIMDiscardRow1_1("", Float) = 0
-		[HideInInspector] _UDIMDiscardRow1_2("", Float) = 0
-		[HideInInspector] _UDIMDiscardRow1_3("", Float) = 0
-		[ThryMultiFloats(true, _UDIMDiscardRow0_1, _UDIMDiscardRow0_2, _UDIMDiscardRow0_3)] _UDIMDiscardRow0_0("v = 0", Float) = 0
-		[HideInInspector] _UDIMDiscardRow0_1("", Float) = 0
-		[HideInInspector] _UDIMDiscardRow0_2("", Float) = 0
-		[HideInInspector] _UDIMDiscardRow0_3("", Float) = 0
-		[HideInInspector] m_end_udimdiscardOptions ("UV Tile Discard", Float) = 0
 		[HideInInspector] m_start_emissionOptions ("Emission 0--{reference_property:_EnableEmission,button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/special-fx/emission},hover:Documentation}}", Float) = 0
 		[HideInInspector][ThryToggle(_EMISSION)]_EnableEmission ("Enable Emission", Float) = 0
 		[ToggleUI]_EmissionReplace0 ("Replace Base Color", Float) = 0
@@ -665,7 +643,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
  #define COLOR_GRADING_HDR 
  #define POI_ENVIRORIM 
  #define POI_MATCAP0 
- #define POI_UDIMDISCARD 
  #define VIGNETTE_MASKED 
  #define _EMISSION 
  #define _LIGHTINGMODE_FLAT 
@@ -873,26 +850,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
 			float _GlobalThemeValue1;
 			float _GlobalThemeValue2;
 			float _GlobalThemeValue3;
-			#ifdef POI_UDIMDISCARD
-			float _UDIMDiscardMode;
-			float _UDIMDiscardUV;
-			float _UDIMDiscardRow3_0;
-			float _UDIMDiscardRow3_1;
-			float _UDIMDiscardRow3_2;
-			float _UDIMDiscardRow3_3;
-			float _UDIMDiscardRow2_0;
-			float _UDIMDiscardRow2_1;
-			float _UDIMDiscardRow2_2;
-			float _UDIMDiscardRow2_3;
-			float _UDIMDiscardRow1_0;
-			float _UDIMDiscardRow1_1;
-			float _UDIMDiscardRow1_2;
-			float _UDIMDiscardRow1_3;
-			float _UDIMDiscardRow0_0;
-			float _UDIMDiscardRow0_1;
-			float _UDIMDiscardRow0_2;
-			float _UDIMDiscardRow0_3;
-			#endif
 			float _StereoEnabled;
 			float _PolarUV;
 			float2 _PolarCenter;
@@ -2220,31 +2177,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
 				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(v);
 				#endif
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
-				#ifdef POI_UDIMDISCARD
-				
-				if((0.0 /*_UDIMDiscardMode*/) == 0) // Discard Vertices instead of just pixels
-				{
-					float2 udim = 0;
-					udim += (v.uv0.xy * ((0.0 /*_UDIMDiscardUV*/) == 0));
-					udim += (v.uv1.xy * ((0.0 /*_UDIMDiscardUV*/) == 1));
-					udim += (v.uv2.xy * ((0.0 /*_UDIMDiscardUV*/) == 2));
-					udim += (v.uv3.xy * ((0.0 /*_UDIMDiscardUV*/) == 3));
-					float isDiscarded = 0;
-					float4 xMask = float4(  (udim.x >= 0 && udim.x < 1),
-					(udim.x >= 1 && udim.x < 2),
-					(udim.x >= 2 && udim.x < 3),
-					(udim.x >= 3 && udim.x < 4));
-					isDiscarded += (udim.y >= 0 && udim.y < 1) * dot(float4(_UDIMDiscardRow0_0, _UDIMDiscardRow0_1, _UDIMDiscardRow0_2, _UDIMDiscardRow0_3), xMask);
-					isDiscarded += (udim.y >= 1 && udim.y < 2) * dot(float4(_UDIMDiscardRow1_0, _UDIMDiscardRow1_1, _UDIMDiscardRow1_2, _UDIMDiscardRow1_3), xMask);
-					isDiscarded += (udim.y >= 2 && udim.y < 3) * dot(float4((0.0 /*_UDIMDiscardRow2_0*/), _UDIMDiscardRow2_1, _UDIMDiscardRow2_2, _UDIMDiscardRow2_3), xMask);
-					isDiscarded += (udim.y >= 3 && udim.y < 4) * dot(float4((0.0 /*_UDIMDiscardRow3_0*/), (0.0 /*_UDIMDiscardRow3_1*/), (0.0 /*_UDIMDiscardRow3_2*/), (0.0 /*_UDIMDiscardRow3_3*/)), xMask);
-					isDiscarded *= any(float4(udim.y >= 0, udim.y < 4, udim.x >= 0, udim.x < 4)); // never discard outside 4x4 grid in pos coords
-					if(isDiscarded) // Early Return skips rest of vertex shader
-					{
-						return (VertexOut)POI_NAN;
-					}
-				}
-				#endif
 				o.objectPos = mul(unity_ObjectToWorld, float4(0, 0, 0, 1)).xyz;
 				o.objNormal = v.normal;
 				o.normal = UnityObjectToWorldNormal(v.normal);
@@ -2539,27 +2471,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
 			void ApplyGlobalMaskModifiers(in PoiMesh poiMesh, inout PoiMods poiMods, in PoiCam poiCam)
 			{
 			}
-			#ifdef POI_UDIMDISCARD
-			void applyUDIMDiscard(in VertexOut i)
-			{
-				if((0.0 /*_UDIMDiscardMode*/) == 1) // Don't run if in vertex mode
-				{
-					float2 udim = floor(vertexUV(i, (0.0 /*_UDIMDiscardUV*/)));
-					float isDiscarded = 0;
-					float4 xMask = float4(  (udim.x >= 0 && udim.x < 1),
-					(udim.x >= 1 && udim.x < 2),
-					(udim.x >= 2 && udim.x < 3),
-					(udim.x >= 3 && udim.x < 4));
-					isDiscarded += (udim.y >= 0 && udim.y < 1) * dot(float4(_UDIMDiscardRow0_0, _UDIMDiscardRow0_1, _UDIMDiscardRow0_2, _UDIMDiscardRow0_3), xMask);
-					isDiscarded += (udim.y >= 1 && udim.y < 2) * dot(float4(_UDIMDiscardRow1_0, _UDIMDiscardRow1_1, _UDIMDiscardRow1_2, _UDIMDiscardRow1_3), xMask);
-					isDiscarded += (udim.y >= 2 && udim.y < 3) * dot(float4((0.0 /*_UDIMDiscardRow2_0*/), _UDIMDiscardRow2_1, _UDIMDiscardRow2_2, _UDIMDiscardRow2_3), xMask);
-					isDiscarded += (udim.y >= 3 && udim.y < 4) * dot(float4((0.0 /*_UDIMDiscardRow3_0*/), (0.0 /*_UDIMDiscardRow3_1*/), (0.0 /*_UDIMDiscardRow3_2*/), (0.0 /*_UDIMDiscardRow3_3*/)), xMask);
-					isDiscarded *= any(float4(udim.y >= 0, udim.y < 4, udim.x >= 0, udim.x < 4)); // never discard outside 4x4 grid in pos coords
-					clip(0.01 - isDiscarded); // Clip if discarded
-				}
-				return;
-			}
-			#endif
 			float2 calculatePolarCoordinate(in PoiMesh poiMesh)
 			{
 				float2 delta = poiMesh.uv[(0.0 /*_PolarUV*/)] - float4(0.5,0.5,0,0);
@@ -3987,7 +3898,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
  #define COLOR_GRADING_HDR 
  #define POI_ENVIRORIM 
  #define POI_MATCAP0 
- #define POI_UDIMDISCARD 
  #define VIGNETTE_MASKED 
  #define _EMISSION 
  #define _LIGHTINGMODE_FLAT 
@@ -4247,26 +4157,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
 			float _GlobalThemeValue1;
 			float _GlobalThemeValue2;
 			float _GlobalThemeValue3;
-			#ifdef POI_UDIMDISCARD
-			float _UDIMDiscardMode;
-			float _UDIMDiscardUV;
-			float _UDIMDiscardRow3_0;
-			float _UDIMDiscardRow3_1;
-			float _UDIMDiscardRow3_2;
-			float _UDIMDiscardRow3_3;
-			float _UDIMDiscardRow2_0;
-			float _UDIMDiscardRow2_1;
-			float _UDIMDiscardRow2_2;
-			float _UDIMDiscardRow2_3;
-			float _UDIMDiscardRow1_0;
-			float _UDIMDiscardRow1_1;
-			float _UDIMDiscardRow1_2;
-			float _UDIMDiscardRow1_3;
-			float _UDIMDiscardRow0_0;
-			float _UDIMDiscardRow0_1;
-			float _UDIMDiscardRow0_2;
-			float _UDIMDiscardRow0_3;
-			#endif
 			float _StereoEnabled;
 			float _PolarUV;
 			float2 _PolarCenter;
@@ -5416,31 +5306,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
 				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(v);
 				#endif
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
-				#ifdef POI_UDIMDISCARD
-				
-				if((0.0 /*_UDIMDiscardMode*/) == 0) // Discard Vertices instead of just pixels
-				{
-					float2 udim = 0;
-					udim += (v.uv0.xy * ((0.0 /*_UDIMDiscardUV*/) == 0));
-					udim += (v.uv1.xy * ((0.0 /*_UDIMDiscardUV*/) == 1));
-					udim += (v.uv2.xy * ((0.0 /*_UDIMDiscardUV*/) == 2));
-					udim += (v.uv3.xy * ((0.0 /*_UDIMDiscardUV*/) == 3));
-					float isDiscarded = 0;
-					float4 xMask = float4(  (udim.x >= 0 && udim.x < 1),
-					(udim.x >= 1 && udim.x < 2),
-					(udim.x >= 2 && udim.x < 3),
-					(udim.x >= 3 && udim.x < 4));
-					isDiscarded += (udim.y >= 0 && udim.y < 1) * dot(float4(_UDIMDiscardRow0_0, _UDIMDiscardRow0_1, _UDIMDiscardRow0_2, _UDIMDiscardRow0_3), xMask);
-					isDiscarded += (udim.y >= 1 && udim.y < 2) * dot(float4(_UDIMDiscardRow1_0, _UDIMDiscardRow1_1, _UDIMDiscardRow1_2, _UDIMDiscardRow1_3), xMask);
-					isDiscarded += (udim.y >= 2 && udim.y < 3) * dot(float4((0.0 /*_UDIMDiscardRow2_0*/), _UDIMDiscardRow2_1, _UDIMDiscardRow2_2, _UDIMDiscardRow2_3), xMask);
-					isDiscarded += (udim.y >= 3 && udim.y < 4) * dot(float4((0.0 /*_UDIMDiscardRow3_0*/), (0.0 /*_UDIMDiscardRow3_1*/), (0.0 /*_UDIMDiscardRow3_2*/), (0.0 /*_UDIMDiscardRow3_3*/)), xMask);
-					isDiscarded *= any(float4(udim.y >= 0, udim.y < 4, udim.x >= 0, udim.x < 4)); // never discard outside 4x4 grid in pos coords
-					if(isDiscarded) // Early Return skips rest of vertex shader
-					{
-						return (VertexOut)POI_NAN;
-					}
-				}
-				#endif
 				o.objectPos = mul(unity_ObjectToWorld, float4(0, 0, 0, 1)).xyz;
 				o.objNormal = v.normal;
 				o.normal = UnityObjectToWorldNormal(v.normal);
@@ -5791,27 +5656,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
 			void ApplyGlobalMaskModifiers(in PoiMesh poiMesh, inout PoiMods poiMods, in PoiCam poiCam)
 			{
 			}
-			#ifdef POI_UDIMDISCARD
-			void applyUDIMDiscard(in VertexOut i)
-			{
-				if((0.0 /*_UDIMDiscardMode*/) == 1) // Don't run if in vertex mode
-				{
-					float2 udim = floor(vertexUV(i, (0.0 /*_UDIMDiscardUV*/)));
-					float isDiscarded = 0;
-					float4 xMask = float4(  (udim.x >= 0 && udim.x < 1),
-					(udim.x >= 1 && udim.x < 2),
-					(udim.x >= 2 && udim.x < 3),
-					(udim.x >= 3 && udim.x < 4));
-					isDiscarded += (udim.y >= 0 && udim.y < 1) * dot(float4(_UDIMDiscardRow0_0, _UDIMDiscardRow0_1, _UDIMDiscardRow0_2, _UDIMDiscardRow0_3), xMask);
-					isDiscarded += (udim.y >= 1 && udim.y < 2) * dot(float4(_UDIMDiscardRow1_0, _UDIMDiscardRow1_1, _UDIMDiscardRow1_2, _UDIMDiscardRow1_3), xMask);
-					isDiscarded += (udim.y >= 2 && udim.y < 3) * dot(float4((0.0 /*_UDIMDiscardRow2_0*/), _UDIMDiscardRow2_1, _UDIMDiscardRow2_2, _UDIMDiscardRow2_3), xMask);
-					isDiscarded += (udim.y >= 3 && udim.y < 4) * dot(float4((0.0 /*_UDIMDiscardRow3_0*/), (0.0 /*_UDIMDiscardRow3_1*/), (0.0 /*_UDIMDiscardRow3_2*/), (0.0 /*_UDIMDiscardRow3_3*/)), xMask);
-					isDiscarded *= any(float4(udim.y >= 0, udim.y < 4, udim.x >= 0, udim.x < 4)); // never discard outside 4x4 grid in pos coords
-					clip(0.01 - isDiscarded); // Clip if discarded
-				}
-				return;
-			}
-			#endif
 			float2 calculatePolarCoordinate(in PoiMesh poiMesh)
 			{
 				float2 delta = poiMesh.uv[(0.0 /*_PolarUV*/)] - float4(0.5,0.5,0,0);
@@ -6538,7 +6382,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
  #define COLOR_GRADING_HDR 
  #define POI_ENVIRORIM 
  #define POI_MATCAP0 
- #define POI_UDIMDISCARD 
  #define VIGNETTE_MASKED 
  #define _EMISSION 
  #define _LIGHTINGMODE_FLAT 
@@ -6745,26 +6588,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
 			float _GlobalThemeValue1;
 			float _GlobalThemeValue2;
 			float _GlobalThemeValue3;
-			#ifdef POI_UDIMDISCARD
-			float _UDIMDiscardMode;
-			float _UDIMDiscardUV;
-			float _UDIMDiscardRow3_0;
-			float _UDIMDiscardRow3_1;
-			float _UDIMDiscardRow3_2;
-			float _UDIMDiscardRow3_3;
-			float _UDIMDiscardRow2_0;
-			float _UDIMDiscardRow2_1;
-			float _UDIMDiscardRow2_2;
-			float _UDIMDiscardRow2_3;
-			float _UDIMDiscardRow1_0;
-			float _UDIMDiscardRow1_1;
-			float _UDIMDiscardRow1_2;
-			float _UDIMDiscardRow1_3;
-			float _UDIMDiscardRow0_0;
-			float _UDIMDiscardRow0_1;
-			float _UDIMDiscardRow0_2;
-			float _UDIMDiscardRow0_3;
-			#endif
 			float _StereoEnabled;
 			float _PolarUV;
 			float2 _PolarCenter;
@@ -8028,31 +7851,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
 				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(v);
 				#endif
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
-				#ifdef POI_UDIMDISCARD
-				
-				if((0.0 /*_UDIMDiscardMode*/) == 0) // Discard Vertices instead of just pixels
-				{
-					float2 udim = 0;
-					udim += (v.uv0.xy * ((0.0 /*_UDIMDiscardUV*/) == 0));
-					udim += (v.uv1.xy * ((0.0 /*_UDIMDiscardUV*/) == 1));
-					udim += (v.uv2.xy * ((0.0 /*_UDIMDiscardUV*/) == 2));
-					udim += (v.uv3.xy * ((0.0 /*_UDIMDiscardUV*/) == 3));
-					float isDiscarded = 0;
-					float4 xMask = float4(  (udim.x >= 0 && udim.x < 1),
-					(udim.x >= 1 && udim.x < 2),
-					(udim.x >= 2 && udim.x < 3),
-					(udim.x >= 3 && udim.x < 4));
-					isDiscarded += (udim.y >= 0 && udim.y < 1) * dot(float4(_UDIMDiscardRow0_0, _UDIMDiscardRow0_1, _UDIMDiscardRow0_2, _UDIMDiscardRow0_3), xMask);
-					isDiscarded += (udim.y >= 1 && udim.y < 2) * dot(float4(_UDIMDiscardRow1_0, _UDIMDiscardRow1_1, _UDIMDiscardRow1_2, _UDIMDiscardRow1_3), xMask);
-					isDiscarded += (udim.y >= 2 && udim.y < 3) * dot(float4((0.0 /*_UDIMDiscardRow2_0*/), _UDIMDiscardRow2_1, _UDIMDiscardRow2_2, _UDIMDiscardRow2_3), xMask);
-					isDiscarded += (udim.y >= 3 && udim.y < 4) * dot(float4((0.0 /*_UDIMDiscardRow3_0*/), (0.0 /*_UDIMDiscardRow3_1*/), (0.0 /*_UDIMDiscardRow3_2*/), (0.0 /*_UDIMDiscardRow3_3*/)), xMask);
-					isDiscarded *= any(float4(udim.y >= 0, udim.y < 4, udim.x >= 0, udim.x < 4)); // never discard outside 4x4 grid in pos coords
-					if(isDiscarded) // Early Return skips rest of vertex shader
-					{
-						return (VertexOut)POI_NAN;
-					}
-				}
-				#endif
 				o.objectPos = mul(unity_ObjectToWorld, float4(0, 0, 0, 1)).xyz;
 				o.objNormal = v.normal;
 				o.normal = UnityObjectToWorldNormal(v.normal);
@@ -8347,27 +8145,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
 			void ApplyGlobalMaskModifiers(in PoiMesh poiMesh, inout PoiMods poiMods, in PoiCam poiCam)
 			{
 			}
-			#ifdef POI_UDIMDISCARD
-			void applyUDIMDiscard(in VertexOut i)
-			{
-				if((0.0 /*_UDIMDiscardMode*/) == 1) // Don't run if in vertex mode
-				{
-					float2 udim = floor(vertexUV(i, (0.0 /*_UDIMDiscardUV*/)));
-					float isDiscarded = 0;
-					float4 xMask = float4(  (udim.x >= 0 && udim.x < 1),
-					(udim.x >= 1 && udim.x < 2),
-					(udim.x >= 2 && udim.x < 3),
-					(udim.x >= 3 && udim.x < 4));
-					isDiscarded += (udim.y >= 0 && udim.y < 1) * dot(float4(_UDIMDiscardRow0_0, _UDIMDiscardRow0_1, _UDIMDiscardRow0_2, _UDIMDiscardRow0_3), xMask);
-					isDiscarded += (udim.y >= 1 && udim.y < 2) * dot(float4(_UDIMDiscardRow1_0, _UDIMDiscardRow1_1, _UDIMDiscardRow1_2, _UDIMDiscardRow1_3), xMask);
-					isDiscarded += (udim.y >= 2 && udim.y < 3) * dot(float4((0.0 /*_UDIMDiscardRow2_0*/), _UDIMDiscardRow2_1, _UDIMDiscardRow2_2, _UDIMDiscardRow2_3), xMask);
-					isDiscarded += (udim.y >= 3 && udim.y < 4) * dot(float4((0.0 /*_UDIMDiscardRow3_0*/), (0.0 /*_UDIMDiscardRow3_1*/), (0.0 /*_UDIMDiscardRow3_2*/), (0.0 /*_UDIMDiscardRow3_3*/)), xMask);
-					isDiscarded *= any(float4(udim.y >= 0, udim.y < 4, udim.x >= 0, udim.x < 4)); // never discard outside 4x4 grid in pos coords
-					clip(0.01 - isDiscarded); // Clip if discarded
-				}
-				return;
-			}
-			#endif
 			float2 calculatePolarCoordinate(in PoiMesh poiMesh)
 			{
 				float2 delta = poiMesh.uv[(0.0 /*_PolarUV*/)] - float4(0.5,0.5,0,0);
@@ -9655,7 +9432,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
  #define COLOR_GRADING_HDR 
  #define POI_ENVIRORIM 
  #define POI_MATCAP0 
- #define POI_UDIMDISCARD 
  #define VIGNETTE_MASKED 
  #define _EMISSION 
  #define _LIGHTINGMODE_FLAT 
@@ -9780,26 +9556,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
 			float _AlphaBoostFA;
 			float _AlphaGlobalMask;
 			float _AlphaGlobalMaskBlendType;
-			#ifdef POI_UDIMDISCARD
-			float _UDIMDiscardMode;
-			float _UDIMDiscardUV;
-			float _UDIMDiscardRow3_0;
-			float _UDIMDiscardRow3_1;
-			float _UDIMDiscardRow3_2;
-			float _UDIMDiscardRow3_3;
-			float _UDIMDiscardRow2_0;
-			float _UDIMDiscardRow2_1;
-			float _UDIMDiscardRow2_2;
-			float _UDIMDiscardRow2_3;
-			float _UDIMDiscardRow1_0;
-			float _UDIMDiscardRow1_1;
-			float _UDIMDiscardRow1_2;
-			float _UDIMDiscardRow1_3;
-			float _UDIMDiscardRow0_0;
-			float _UDIMDiscardRow0_1;
-			float _UDIMDiscardRow0_2;
-			float _UDIMDiscardRow0_3;
-			#endif
 			float _StereoEnabled;
 			float _PolarUV;
 			float2 _PolarCenter;
@@ -10933,31 +10689,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
 				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(v);
 				#endif
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
-				#ifdef POI_UDIMDISCARD
-				
-				if((0.0 /*_UDIMDiscardMode*/) == 0) // Discard Vertices instead of just pixels
-				{
-					float2 udim = 0;
-					udim += (v.uv0.xy * ((0.0 /*_UDIMDiscardUV*/) == 0));
-					udim += (v.uv1.xy * ((0.0 /*_UDIMDiscardUV*/) == 1));
-					udim += (v.uv2.xy * ((0.0 /*_UDIMDiscardUV*/) == 2));
-					udim += (v.uv3.xy * ((0.0 /*_UDIMDiscardUV*/) == 3));
-					float isDiscarded = 0;
-					float4 xMask = float4(  (udim.x >= 0 && udim.x < 1),
-					(udim.x >= 1 && udim.x < 2),
-					(udim.x >= 2 && udim.x < 3),
-					(udim.x >= 3 && udim.x < 4));
-					isDiscarded += (udim.y >= 0 && udim.y < 1) * dot(float4(_UDIMDiscardRow0_0, _UDIMDiscardRow0_1, _UDIMDiscardRow0_2, _UDIMDiscardRow0_3), xMask);
-					isDiscarded += (udim.y >= 1 && udim.y < 2) * dot(float4(_UDIMDiscardRow1_0, _UDIMDiscardRow1_1, _UDIMDiscardRow1_2, _UDIMDiscardRow1_3), xMask);
-					isDiscarded += (udim.y >= 2 && udim.y < 3) * dot(float4((0.0 /*_UDIMDiscardRow2_0*/), _UDIMDiscardRow2_1, _UDIMDiscardRow2_2, _UDIMDiscardRow2_3), xMask);
-					isDiscarded += (udim.y >= 3 && udim.y < 4) * dot(float4((0.0 /*_UDIMDiscardRow3_0*/), (0.0 /*_UDIMDiscardRow3_1*/), (0.0 /*_UDIMDiscardRow3_2*/), (0.0 /*_UDIMDiscardRow3_3*/)), xMask);
-					isDiscarded *= any(float4(udim.y >= 0, udim.y < 4, udim.x >= 0, udim.x < 4)); // never discard outside 4x4 grid in pos coords
-					if(isDiscarded) // Early Return skips rest of vertex shader
-					{
-						return (VertexOut)POI_NAN;
-					}
-				}
-				#endif
 				o.objectPos = mul(unity_ObjectToWorld, float4(0, 0, 0, 1)).xyz;
 				o.objNormal = v.normal;
 				o.normal = UnityObjectToWorldNormal(v.normal);
@@ -11239,27 +10970,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/f98e7b0493f6d634
 			void ApplyGlobalMaskModifiers(in PoiMesh poiMesh, inout PoiMods poiMods, in PoiCam poiCam)
 			{
 			}
-			#ifdef POI_UDIMDISCARD
-			void applyUDIMDiscard(in VertexOut i)
-			{
-				if((0.0 /*_UDIMDiscardMode*/) == 1) // Don't run if in vertex mode
-				{
-					float2 udim = floor(vertexUV(i, (0.0 /*_UDIMDiscardUV*/)));
-					float isDiscarded = 0;
-					float4 xMask = float4(  (udim.x >= 0 && udim.x < 1),
-					(udim.x >= 1 && udim.x < 2),
-					(udim.x >= 2 && udim.x < 3),
-					(udim.x >= 3 && udim.x < 4));
-					isDiscarded += (udim.y >= 0 && udim.y < 1) * dot(float4(_UDIMDiscardRow0_0, _UDIMDiscardRow0_1, _UDIMDiscardRow0_2, _UDIMDiscardRow0_3), xMask);
-					isDiscarded += (udim.y >= 1 && udim.y < 2) * dot(float4(_UDIMDiscardRow1_0, _UDIMDiscardRow1_1, _UDIMDiscardRow1_2, _UDIMDiscardRow1_3), xMask);
-					isDiscarded += (udim.y >= 2 && udim.y < 3) * dot(float4((0.0 /*_UDIMDiscardRow2_0*/), _UDIMDiscardRow2_1, _UDIMDiscardRow2_2, _UDIMDiscardRow2_3), xMask);
-					isDiscarded += (udim.y >= 3 && udim.y < 4) * dot(float4((0.0 /*_UDIMDiscardRow3_0*/), (0.0 /*_UDIMDiscardRow3_1*/), (0.0 /*_UDIMDiscardRow3_2*/), (0.0 /*_UDIMDiscardRow3_3*/)), xMask);
-					isDiscarded *= any(float4(udim.y >= 0, udim.y < 4, udim.x >= 0, udim.x < 4)); // never discard outside 4x4 grid in pos coords
-					clip(0.01 - isDiscarded); // Clip if discarded
-				}
-				return;
-			}
-			#endif
 			float2 calculatePolarCoordinate(in PoiMesh poiMesh)
 			{
 				float2 delta = poiMesh.uv[(0.0 /*_PolarUV*/)] - float4(0.5,0.5,0,0);

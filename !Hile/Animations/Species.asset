@@ -13,66 +13,6 @@ MonoBehaviour:
   m_Name: Species
   m_EditorClassIdentifier: 
   controls:
-  - name: Fennec Ears
-    icon: {fileID: 2800000, guid: 37a5d92533143144a86eb01ad2be2b60, type: 3}
-    type: 102
-    parameter:
-      name: Ears
-    value: 0
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
-  - name: Wolf Ears
-    icon: {fileID: 2800000, guid: 07223fed0b9dcef46b998057c4151ed4, type: 3}
-    type: 102
-    parameter:
-      name: Ears
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
-  - name: Dog Ears
-    icon: {fileID: 2800000, guid: c3b2c777bba1a8a479821d928a78634a, type: 3}
-    type: 102
-    parameter:
-      name: Ears
-    value: 2
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
-  - name: Tail Off
-    icon: {fileID: 2800000, guid: 37680b0dd27875b46a62f8432adf7518, type: 3}
-    type: 102
-    parameter:
-      name: Tail
-    value: 0
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
-  - name: Wolf Tail
-    icon: {fileID: 2800000, guid: 58ad1151cdaa57040a4a1fc39a4d104e, type: 3}
-    type: 102
-    parameter:
-      name: Tail
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
-  - name: Dog Tail
-    icon: {fileID: 2800000, guid: cee252a03e1a2e346a5d71b8dbc67f54, type: 3}
-    type: 102
-    parameter:
-      name: Tail
-    value: 2
-    style: 0
-    subMenu: {fileID: 11400000, guid: 8145046719efd9e4a8e22a722c38d9e7, type: 2}
-    subParameters: []
-    labels: []
   - name: Markings
     icon: {fileID: 2800000, guid: 0e5d1a0b637281b4db947a2c30166f91, type: 3}
     type: 103
@@ -91,6 +31,27 @@ MonoBehaviour:
     value: 0
     style: 0
     subMenu: {fileID: 11400000, guid: 66d852ee6123c1f49ad2ab461267b3b4, type: 2}
+    subParameters: []
+    labels: []
+  - name: Ears
+    icon: {fileID: 2800000, guid: 07223fed0b9dcef46b998057c4151ed4, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
     subParameters:
-    - name: 
+    - name: Ears
+    labels: []
+  - name: Tail
+    icon: {fileID: 2800000, guid: 58ad1151cdaa57040a4a1fc39a4d104e, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: Tail
     labels: []

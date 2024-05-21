@@ -32,7 +32,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -74,7 +74,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
@@ -244,6 +244,14 @@ ModelImporter:
         modified: 0
     - boneName: Eye_R
       humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Whiskers
+      humanName: Jaw
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}
@@ -1207,6 +1215,101 @@ ModelImporter:
       position: {x: 0.069722235, y: 0.0014606621, z: -0.06446857}
       rotation: {x: -0.7784782, y: 0.06095953, z: 0.06095961, w: 0.62172306}
       scale: {x: 0.99999994, y: 0.99999976, z: 0.99999976}
+    - name: Ears_Cat
+      parentName: Head
+      position: {x: -0.0000003115739, y: 0.10585439, z: 0.0116709815}
+      rotation: {x: 0.00000007878186, y: -0.00000011932165, z: 0.00000032584177, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CatEar_L
+      parentName: Ears_Cat
+      position: {x: -0.039406355, y: 0.010714436, z: -0.0066542397}
+      rotation: {x: 0.06781871, y: 0.03629201, z: 0.40426263, w: 0.9114029}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CatEar_L_001
+      parentName: CatEar_L
+      position: {x: 0.00000017819912, y: 0.042906042, z: 0.000000023283064}
+      rotation: {x: 0.054528173, y: -0.033831004, z: -0.13323416, w: 0.98900497}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: CatEar_L_002
+      parentName: CatEar_L_001
+      position: {x: -0.00000016028305, y: 0.064877726, z: 0.00000007916242}
+      rotation: {x: 0.002278549, y: -0.05160351, z: -0.19053493, w: 0.9803205}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: CatEar_R
+      parentName: Ears_Cat
+      position: {x: 0.03940612, y: 0.010714742, z: -0.006654239}
+      rotation: {x: 0.0678183, y: -0.036292367, z: -0.40426245, w: 0.911403}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CatEar_R_001
+      parentName: CatEar_R
+      position: {x: 0.00000022589302, y: 0.04290579, z: 0.000000017695129}
+      rotation: {x: 0.054528475, y: 0.033831958, z: 0.13323353, w: 0.989005}
+      scale: {x: 1.0000001, y: 0.9999999, z: 0.99999994}
+    - name: CatEar_R_002
+      parentName: CatEar_R_001
+      position: {x: -0.00000006506143, y: 0.064877845, z: -0.00000002514571}
+      rotation: {x: 0.0022783817, y: 0.051603813, z: 0.19053471, w: 0.9803206}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.99999994}
+    - name: Ears_Lion
+      parentName: Head
+      position: {x: -0.00000031742417, y: 0.11483919, z: -0.010363502}
+      rotation: {x: 0.000000027831717, y: -1.123279e-10, z: 0.00000032584185, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LionEars_L
+      parentName: Ears_Lion
+      position: {x: -0.031248221, y: 0.0010696725, z: -0.011922687}
+      rotation: {x: -0.079670765, y: -0.05476912, z: 0.563843, w: 0.8202036}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LionEars_L_001
+      parentName: LionEars_L
+      position: {x: -0.00000040315265, y: 0.04138561, z: -0.000000056810677}
+      rotation: {x: 0.027200485, y: 0.024263445, z: -0.14468028, w: 0.9888069}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.9999999}
+    - name: LionEars_L_002
+      parentName: LionEars_L_001
+      position: {x: 0.00000014711699, y: 0.050846465, z: 0.00000005401671}
+      rotation: {x: -0.041480657, y: -0.0015809973, z: 0.008680535, w: 0.9991003}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: LionEars_R
+      parentName: Ears_Lion
+      position: {x: 0.031248394, y: 0.0010693935, z: -0.0119226985}
+      rotation: {x: -0.079670645, y: 0.054769337, z: -0.56384325, w: 0.8202034}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: LionEars_R_001
+      parentName: LionEars_R
+      position: {x: -0.000000118404095, y: 0.04138556, z: -0.000000017695129}
+      rotation: {x: 0.027200272, y: -0.024264, z: 0.14467959, w: 0.98880696}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LionEars_R_002
+      parentName: LionEars_R_001
+      position: {x: 0.000000085966036, y: 0.05084647, z: 0.000000006519258}
+      rotation: {x: -0.04148, y: 0.0015815131, z: -0.008681506, w: 0.9991004}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
+    - name: Ears_Leopard
+      parentName: Head
+      position: {x: -0.00000032816, y: 0.13131225, z: -0.0077228867}
+      rotation: {x: -0.00000009059507, y: -1.1236363e-10, z: 0.00000032584057, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeopardEar_L
+      parentName: Ears_Leopard
+      position: {x: -0.030191578, y: -0.005603178, z: -0.0028611938}
+      rotation: {x: -0.08885833, y: -0.06718492, z: 0.5960989, w: 0.7951456}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeopardEar_L_001
+      parentName: LeopardEar_L
+      position: {x: -0.000000054802513, y: 0.03996133, z: -0.0000000055879354}
+      rotation: {x: 0.039142627, y: 0.030230762, z: -0.15905221, w: 0.98603064}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.99999994}
+    - name: LeopardEar_R
+      parentName: Ears_Leopard
+      position: {x: 0.030191526, y: -0.0056032175, z: -0.0028611715}
+      rotation: {x: -0.088858314, y: 0.06718496, z: -0.5960999, w: 0.79514486}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: LeopardEar_R_001
+      parentName: LeopardEar_R
+      position: {x: -0.00000032404387, y: 0.03996147, z: 0.0000000055879354}
+      rotation: {x: 0.039142717, y: -0.030230587, z: 0.1590504, w: 0.98603094}
+      scale: {x: 0.9999999, y: 1, z: 1.0000001}
     - name: Shoulder_L
       parentName: Upper_Chest
       position: {x: -0.024768677, y: 0.058259778, z: -0.009187382}
@@ -1572,11 +1675,171 @@ ModelImporter:
       position: {x: 3.3087225e-24, y: 0.06966315, z: 0.000000029802322}
       rotation: {x: 0.3335302, y: 2.4744865e-22, z: 7.405878e-17, w: 0.9427394}
       scale: {x: 1, y: 1.0000001, z: 1.0000001}
-    - name: EarsTails
-      parentName: Elune(Clone)
-      position: {x: -8.271804e-25, y: -0.000000040978193, z: 0.00000000186265}
-      rotation: {x: -0.7071069, y: -6.4339535e-24, z: 3.2169777e-24, w: 0.7071067}
+    - name: Tail_Cat
+      parentName: Hips
+      position: {x: -0.000000047571046, y: 0.055602606, z: -0.029104073}
+      rotation: {x: -0.77830166, y: -0.00000025367356, z: 0.00000020450535, w: 0.6278905}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_Cat_001
+      parentName: Tail_Cat
+      position: {x: -8.0838114e-16, y: 0.05440472, z: 0.000000025145734}
+      rotation: {x: -0.23923522, y: 0.000000115747625, z: -0.000000028519393, w: 0.97096163}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Tail_Cat_002
+      parentName: Tail_Cat_001
+      position: {x: 8.1712415e-14, y: 0.057284668, z: -0.00000010430812}
+      rotation: {x: -0.11074309, y: -4.822379e-13, z: -0.000000026402768, w: 0.9938491}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Tail_Cat_003
+      parentName: Tail_Cat_002
+      position: {x: -1.04805054e-13, y: 0.060503803, z: -0.000000007450583}
+      rotation: {x: -0.090783305, y: -6.3285797e-13, z: -0.00000002164443, w: 0.9958707}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_Cat_004
+      parentName: Tail_Cat_003
+      position: {x: 5.684342e-14, y: 0.0863021, z: 0.00000013411045}
+      rotation: {x: -0.058159597, y: 3.2840047e-14, z: -0.000000013865861, w: 0.9983073}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Tail_Cat_005
+      parentName: Tail_Cat_004
+      position: {x: -1.0658141e-14, y: 0.0732232, z: -0.000000014901159}
+      rotation: {x: -0.029128464, y: 3.5610067e-13, z: -0.0000000069449335, w: 0.9995757}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Tail_Cat_006
+      parentName: Tail_Cat_005
+      position: {x: 3.907985e-14, y: 0.08472204, z: -0.000000014901153}
+      rotation: {x: 0.023452345, y: -2.2475518e-13, z: 0.0000000055913256, w: 0.999725}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_Cat_007
+      parentName: Tail_Cat_006
+      position: {x: 4.973799e-14, y: 0.081672184, z: -0.00000005215406}
+      rotation: {x: 0.09568614, y: 7.366005e-13, z: 0.000000022813282, w: 0.9954116}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Tail_Cat_008
+      parentName: Tail_Cat_007
+      position: {x: -2.1316282e-14, y: 0.08220753, z: 0.000000074505785}
+      rotation: {x: 0.22867702, y: -1.281307e-12, z: 0.00000005452044, w: 0.97350234}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Tail_Cat_009
+      parentName: Tail_Cat_008
+      position: {x: 1.3855583e-13, y: 0.092860304, z: -0.00000008940706}
+      rotation: {x: 0.19209704, y: 4.8965557e-13, z: 0.000000045798664, w: 0.98137593}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Tail_Leopard
+      parentName: Hips
+      position: {x: -0.00000004501005, y: 0.05166626, z: -0.01031879}
+      rotation: {x: -0.7601803, y: -0.00000024777137, z: 0.0000002116177, w: 0.6497122}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: Tail_Leopard_001
+      parentName: Tail_Leopard
+      position: {x: -3.545688e-14, y: 0.056417827, z: -0.0000001247972}
+      rotation: {x: -0.32718775, y: -4.4554936e-14, z: -1.6918412e-14, w: 0.94495934}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_Leopard_002
+      parentName: Tail_Leopard_001
+      position: {x: 9.585388e-14, y: 0.10614537, z: 0.00000005215406}
+      rotation: {x: -0.1962302, y: 8.014462e-14, z: 9.545281e-14, w: 0.98055786}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_Leopard_003
+      parentName: Tail_Leopard_002
+      position: {x: -5.3217847e-14, y: 0.10517044, z: -0.000000014901179}
+      rotation: {x: -0.082288705, y: -1.6283912e-13, z: 1.069441e-14, w: 0.99660856}
       scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Tail_Leopard_004
+      parentName: Tail_Leopard_003
+      position: {x: -3.525652e-14, y: 0.10156866, z: -0.0000000447035}
+      rotation: {x: -0.009014525, y: 0.000000119205964, z: -0.0000000010745645, w: 0.9999594}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Tail_Leopard_005
+      parentName: Tail_Leopard_004
+      position: {x: 1.10134124e-13, y: 0.092984974, z: -0.000000014901135}
+      rotation: {x: 0.0320118, y: -8.86861e-13, z: 0.000000007632318, w: 0.9994875}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: Tail_Leopard_006
+      parentName: Tail_Leopard_005
+      position: {x: 5.3290705e-14, y: 0.10759176, z: -0.00000005960462}
+      rotation: {x: 0.10302657, y: 1.7156994e-13, z: 0.000000024563656, w: 0.9946786}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Tail_Leopard_007
+      parentName: Tail_Leopard_006
+      position: {x: 8.526513e-14, y: 0.10430985, z: 0.00000005960463}
+      rotation: {x: 0.22427298, y: -3.5005554e-14, z: 0.000000053470913, w: 0.97452635}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Tail_Leopard_008
+      parentName: Tail_Leopard_007
+      position: {x: 3.5527137e-14, y: 0.10374591, z: -0.000000044703583}
+      rotation: {x: 0.41757286, y: -7.2210765e-13, z: 0.000000099557994, w: 0.9086435}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Tail_Leopard_009
+      parentName: Tail_Leopard_008
+      position: {x: 3.907985e-14, y: 0.09210805, z: -0.000000008382049}
+      rotation: {x: 0.44039756, y: 5.6308606e-14, z: 0.000000104998286, w: 0.8978029}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Tail_Leopard_010
+      parentName: Tail_Leopard_009
+      position: {x: 7.1054274e-15, y: 0.08415848, z: -0.00000008940699}
+      rotation: {x: 0.34772545, y: 1.2759989e-14, z: 0.00000008290472, w: 0.93759644}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Tail_Lion
+      parentName: Hips
+      position: {x: -0.00000005408742, y: 0.065597355, z: -0.015952053}
+      rotation: {x: -0.7633147, y: -0.0000002487922, z: 0.00000021041642, w: 0.64602685}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_Lion_001
+      parentName: Tail_Lion
+      position: {x: -2.595927e-14, y: 0.044873, z: 0.000000023283096}
+      rotation: {x: -0.26575363, y: -1.7148379e-13, z: -1.5069498e-13, w: 0.964041}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Tail_Lion_002
+      parentName: Tail_Lion_001
+      position: {x: 9.663971e-14, y: 0.061221316, z: -0.00000014528631}
+      rotation: {x: -0.17780589, y: 2.3123522e-13, z: -2.3974608e-13, w: 0.9840656}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_Lion_003
+      parentName: Tail_Lion_002
+      position: {x: -1.2583684e-14, y: 0.10027689, z: 0.000000044703473}
+      rotation: {x: -0.09454722, y: 0.0000001186747, z: -0.000000011270687, w: 0.99552035}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Tail_Lion_004
+      parentName: Tail_Lion_003
+      position: {x: -1.4210855e-14, y: 0.07490872, z: -0.000000029802319}
+      rotation: {x: -0.042796418, y: 6.4274394e-13, z: -0.000000010203157, w: 0.9990838}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_Lion_005
+      parentName: Tail_Lion_004
+      position: {x: -4.973799e-14, y: 0.08041623, z: -0.000000022351731}
+      rotation: {x: 0.0014753207, y: -3.0198102e-13, z: 3.5146855e-10, w: 0.9999989}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Tail_Lion_006
+      parentName: Tail_Lion_005
+      position: {x: -4.973799e-14, y: 0.08321669, z: -0.000000022351726}
+      rotation: {x: 0.013805054, y: 6.39626e-14, z: 0.000000003291375, w: 0.99990475}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: Tail_Lion_007
+      parentName: Tail_Lion_006
+      position: {x: 1.0658141e-14, y: 0.08150544, z: 0.00000005215408}
+      rotation: {x: 0.032965258, y: -1.0305461e-13, z: 0.0000000078595095, w: 0.9994565}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: Tail_Lion_008
+      parentName: Tail_Lion_007
+      position: {x: -8.1712415e-14, y: 0.07800361, z: -0.000000044703476}
+      rotation: {x: 0.07516146, y: 4.053936e-13, z: 0.000000017919968, w: 0.9971714}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Tail_Lion_009
+      parentName: Tail_Lion_008
+      position: {x: 5.684342e-14, y: 0.10177854, z: 0.00000002607701}
+      rotation: {x: 0.15328498, y: -3.3539995e-13, z: 0.00000003654609, w: 0.98818207}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_Lion_010
+      parentName: Tail_Lion_009
+      position: {x: -1.5987212e-14, y: 0.08705058, z: 0.000000033527527}
+      rotation: {x: 0.28844625, y: -9.0827993e-14, z: 0.000000068770845, w: 0.9574961}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tail_Lion_011
+      parentName: Tail_Lion_010
+      position: {x: -2.9309888e-14, y: 0.10694535, z: -1.5845658e-13}
+      rotation: {x: 0.27747488, y: -1.1717763e-13, z: 0.00000006615513, w: 0.96073294}
+      scale: {x: 1, y: 1, z: 1}
     - name: Hair
       parentName: Elune(Clone)
       position: {x: -8.271804e-25, y: -0.000000040978193, z: 0.00000000186265}
@@ -1592,6 +1855,61 @@ ModelImporter:
       position: {x: -8.271804e-25, y: -0.000000040978193, z: 0.00000000186265}
       rotation: {x: -0.7071069, y: -6.4339535e-24, z: 3.2169777e-24, w: 0.7071067}
       scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: LionEars
+      parentName: Elune(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeopardEars
+      parentName: Elune(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: CatEars
+      parentName: Elune(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: WolfTail
+      parentName: Elune(Clone)
+      position: {x: -8.271804e-25, y: -0.000000040978193, z: 0.00000000186265}
+      rotation: {x: -0.7071069, y: -6.4339535e-24, z: 3.2169777e-24, w: 0.7071067}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: PuppyTail
+      parentName: Elune(Clone)
+      position: {x: -8.271804e-25, y: -0.000000040978193, z: 0.00000000186265}
+      rotation: {x: -0.7071069, y: -6.4339535e-24, z: 3.2169777e-24, w: 0.7071067}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: FennecEars
+      parentName: Elune(Clone)
+      position: {x: -8.271804e-25, y: -0.000000040978193, z: 0.00000000186265}
+      rotation: {x: -0.7071069, y: -6.4339535e-24, z: 3.2169777e-24, w: 0.7071067}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: WolfEars
+      parentName: Elune(Clone)
+      position: {x: -8.271804e-25, y: -0.000000040978193, z: 0.00000000186265}
+      rotation: {x: -0.7071069, y: -6.4339535e-24, z: 3.2169777e-24, w: 0.7071067}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: PuppyEars
+      parentName: Elune(Clone)
+      position: {x: -8.271804e-25, y: -0.000000040978193, z: 0.00000000186265}
+      rotation: {x: -0.7071069, y: -6.4339535e-24, z: 3.2169777e-24, w: 0.7071067}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: CatTail
+      parentName: Elune(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LionTail
+      parentName: Elune(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeopardTail
+      parentName: Elune(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071069, y: 0, z: 0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
