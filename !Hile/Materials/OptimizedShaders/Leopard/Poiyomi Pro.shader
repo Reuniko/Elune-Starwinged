@@ -266,43 +266,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/6d68d538548d24d46ab2388b6
 		_LightingAdditiveGradientStart ("Gradient Start--{condition_showS:(_LightingAdditiveType==1)}", Range(0, 1)) = 0
 		_LightingAdditiveGradientEnd ("Gradient End--{condition_showS:(_LightingAdditiveType==1)}", Range(0, 1)) = .5
 		[HideInInspector] m_end_PoiShading ("Shading", Float) = 0
-		[HideInInspector] m_start_matcap ("Matcap 0--{reference_property:_MatcapEnable,button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/shading/matcap},hover:Documentation}}", Float) = 0
-		[HideInInspector][ThryToggle(POI_MATCAP0)]_MatcapEnable ("Enable Matcap", Float) = 0
-		[ThryWideEnum(UTS Style, 0, Top Pinch, 1, Double Sided, 2)] _MatcapUVMode ("UV Mode", Int) = 1
-		_MatcapColor ("Color--{reference_property:_MatcapColorThemeIndex}", Color) = (1, 1, 1, 1)
-		[HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _MatcapColorThemeIndex ("", Int) = 0
-		[sRGBWarning(true)][TextureNoSO]_Matcap ("Matcap", 2D) = "white" { }
-		_MatcapBorder ("Border", Range(0, .5)) = 0.43
-		[sRGBWarning]_MatcapMask ("Mask--{reference_properties:[_MatcapMaskPan, _MatcapMaskUV, _MatcapMaskChannel, _MatcapMaskInvert]}", 2D) = "white" { }
-		[HideInInspector][Vector2]_MatcapMaskPan ("Panning", Vector) = (0, 0, 0, 0)
-		[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _MatcapMaskUV ("UV", Int) = 0
-		[HideInInspector][Enum(R, 0, G, 1, B, 2, A, 3)]_MatcapMaskChannel ("Channel", Float) = 0
-		[HideInInspector][ToggleUI]_MatcapMaskInvert ("Invert", Float) = 0
-		[ThryWideEnum(Off, 0, 1R, 1, 1G, 2, 1B, 3, 1A, 4, 2R, 5, 2G, 6, 2B, 7, 2A, 8, 3R, 9, 3G, 10, 3B, 11, 3A, 12, 4R, 13, 4G, 14, 4B, 15, 4A, 16)] _MatcapMaskGlobalMask ("Global Mask--{reference_property:_MatcapMaskGlobalMaskBlendType}", Int) = 0
-		[HideInInspector][ThryWideEnum(Replace, 0, Darken, 1, Multiply, 2, Color Burn, 3, Linear Burn, 4, Lighten, 5, Screen, 6, Color Dodge, 7, Linear Dodge(Add), 8, Overlay, 9, Soft Lighten, 10, Hard Light, 11, Vivid Light, 12, Linear Light, 13, Pin Light, 14, Hard Mix, 15, Difference, 16, Exclusion, 17, Subtract, 18, Divide, 19)]_MatcapMaskGlobalMaskBlendType ("Blending", Range(0, 1)) = 2
-		_MatcapEmissionStrength ("Emission Strength", Range(0, 20)) = 0
-		_MatcapIntensity ("Intensity", Range(0, 5)) = 1
-		_MatcapLightMask ("Hide in Shadow", Range(0, 1)) = 0
-		_MatcapReplace ("Replace Blend", Range(0, 1)) = 1
-		_MatcapMultiply ("Multiply Blend", Range(0, 1)) = 0
-		_MatcapAdd ("Add Blend", Range(0, 1)) = 0
-		_MatcapMixed ("Mixed Blend", Range(0, 1)) = 0
-		_MatcapAddToLight ("Add To Light", Range(0, 1)) = 0
-		_MatcapAlphaOverride ("Override Alpha", Range(0, 1)) = 0
-		[Enum(Vertex, 0, Pixel, 1)] _MatcapNormal ("Normal to use", Int) = 1
-		[ThryToggle(POI_MATCAP0_CUSTOM_NORMAL, true)] _Matcap0CustomNormal ("<size=13><b>  Custom Normal</b></size>", Float) = 0
-		[Normal]_Matcap0NormalMap ("Normal Map--{reference_properties:[_Matcap0NormalMapPan, _Matcap0NormalMapUV, _Matcap0NormalMapScale], condition_showS:(_Matcap0CustomNormal==1)}", 2D) = "bump" { }
-		[HideInInspector][Vector2]_Matcap0NormalMapPan ("Panning", Vector) = (0, 0, 0, 0)
-		[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _Matcap0NormalMapUV ("UV", Int) = 0
-		[HideInInspector]_Matcap0NormalMapScale ("Intensity", Range(0, 10)) = 1
-		[ThryToggleUI(true)] _MatcapHueShiftEnabled ("<size=13><b>  Hue Shift</b></size>", Float) = 0
-		_MatcapHueShiftSpeed ("Shift Speed--{condition_showS:(_MatcapHueShiftEnabled==1)}", Float) = 0
-		_MatcapHueShift ("Hue Shift--{condition_showS:(_MatcapHueShiftEnabled==1)}", Range(0, 1)) = 0
-		[HideInInspector] g_start_MatcapTPSMaskGroup ("--{condition_showS:(_TPSPenetratorEnabled==1)}", Float) = 0
-		[ThryToggleUI(true)] _MatcapTPSDepthEnabled ("<size=13><b>  TPS Depth Mask Enabled</b></size>", Float) = 0
-		_MatcapTPSMaskStrength ("TPS Mask Strength--{condition_showS:(_MatcapTPSDepthEnabled==1)}", Range(0, 1)) = 1
-		[HideInInspector] g_end_MatcapTPSMaskGroup ("", Float) = 0
-		[HideInInspector] m_end_matcap ("Matcap--{condition_showS:(_MatcapHueShiftEnabled==1)}", Float) = 0
 		[HideInInspector] m_start_Matcap2 ("Matcap 1--{reference_property:_Matcap2Enable,button_help:{text:Tutorial,action:{type:URL,data:https://www.poiyomi.com/shading/matcap},hover:Documentation}}", Float) = 0
 		[HideInInspector][ThryToggle(COLOR_GRADING_HDR_3D)]_Matcap2Enable ("Enable Matcap 2", Float) = 0
 		[ThryWideEnum(UTS Style, 0, Top Pinch, 1, Double Sided, 2)] _Matcap2UVMode ("UV Mode", Int) = 1
@@ -580,7 +543,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/6d68d538548d24d46ab2388b6
  #define POI_ENVIRORIM 
  #define POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE 
  #define POI_LIGHT_DATA_ADDITIVE_ENABLE 
- #define POI_MATCAP0 
  #define POI_VERTEXLIGHT_ON 
  #define VIGNETTE_MASKED 
  #define _EMISSION 
@@ -800,44 +762,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/6d68d538548d24d46ab2388b6
 			float _LightingAdditiveGradientStart;
 			float _LightingAdditiveGradientEnd;
 			float _LightingAdditiveDetailStrength;
-			#ifdef POI_MATCAP0
-			#if defined(PROP_MATCAP) || !defined(OPTIMIZER_ENABLED)
-			Texture2D _Matcap;
-			float4 _Matcap_ST;
-			float2 _MatcapPan;
-			float _MatcapUV;
-			#endif
-			#if defined(PROP_MATCAPMASK) || !defined(OPTIMIZER_ENABLED)
-			Texture2D _MatcapMask;
-			float4 _MatcapMask_ST;
-			float2 _MatcapMaskPan;
-			float _MatcapMaskUV;
-			float _MatcapMaskChannel;
-			#endif
-			float _MatcapUVMode;
-			float _MatcapMaskInvert;
-			float _MatcapMaskGlobalMask;
-			float _MatcapMaskGlobalMaskBlendType;
-			float _MatcapBorder;
-			float4 _MatcapColor;
-			float _MatcapColorThemeIndex;
-			float _MatcapIntensity;
-			float _MatcapReplace;
-			float _MatcapMultiply;
-			float _MatcapAdd;
-			float _MatcapAddToLight;
-			float _MatcapMixed;
-			float _MatcapAlphaOverride;
-			float _MatcapEnable;
-			float _MatcapLightMask;
-			float _MatcapEmissionStrength;
-			float _MatcapNormal;
-			float _MatcapHueShiftEnabled;
-			float _MatcapHueShiftSpeed;
-			float _MatcapHueShift;
-			float _MatcapTPSDepthEnabled;
-			float _MatcapTPSMaskStrength;
-			#endif
 			#ifdef COLOR_GRADING_HDR_3D
 			#if defined(PROP_MATCAP2) || !defined(OPTIMIZER_ENABLED)
 			Texture2D _Matcap2;
@@ -2779,66 +2703,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/6d68d538548d24d46ab2388b6
 				float4 matcap4 = 0;
 				float matcap4Mask = 0;
 				float2 matcapUV = 0;
-				#ifdef POI_MATCAP0
-				float3 normal0 = poiMesh.normals[(1.0 /*_MatcapNormal*/)];
-				switch((1.0 /*_MatcapUVMode*/))
-				{
-					case 0:
-					{
-						float3 viewNormal = (mul(UNITY_MATRIX_V, float4(normal0, 0))).rgb;
-						float3 NormalBlend_MatCapUV_Detail = viewNormal.rgb * float3(-1, -1, 1);
-						float3 NormalBlend_MatCapUV_Base = (mul(UNITY_MATRIX_V, float4(poiCam.viewDir, 0)).rgb * float3(-1, -1, 1)) + float3(0, 0, 1);
-						float3 noSknewViewNormal = NormalBlend_MatCapUV_Base * dot(NormalBlend_MatCapUV_Base, NormalBlend_MatCapUV_Detail) / NormalBlend_MatCapUV_Base.b - NormalBlend_MatCapUV_Detail;
-						matcapUV = noSknewViewNormal.rg * (0.43 /*_MatcapBorder*/) + 0.5;
-						break;
-					}
-					case 1:
-					{
-						float3 worldViewUp = normalize(float3(0, 1, 0) - poiCam.viewDir * dot(poiCam.viewDir, float3(0, 1, 0)));
-						float3 worldViewRight = normalize(cross(poiCam.viewDir, worldViewUp));
-						matcapUV = float2(dot(worldViewRight, normal0), dot(worldViewUp, normal0)) * (0.43 /*_MatcapBorder*/) + 0.5;
-						break;
-					}
-					case 2:
-					{
-						float3 reflection = reflect(-poiCam.viewDir, normal0);
-						float2 uv = float2(dot(reflection, float3(1, 0, 0)), dot(reflection, float3(0, 1, 0)));
-						matcapUV = uv * (0.43 /*_MatcapBorder*/) + 0.5;
-						break;
-					}
-				}
-				if (IsInMirror())
-				{
-					matcapUV.x = 1 - matcapUV.x;
-				}
-				#if defined(PROP_MATCAP) || !defined(OPTIMIZER_ENABLED)
-				matcap = UNITY_SAMPLE_TEX2D_SAMPLER(_Matcap, _MainTex, TRANSFORM_TEX(matcapUV, _Matcap)) * float4(poiThemeColor(poiMods, float4(1,1,1,1).rgb, (0.0 /*_MatcapColorThemeIndex*/)), float4(1,1,1,1).a);
-				#else
-				matcap = float4(poiThemeColor(poiMods, float4(1,1,1,1).rgb, (0.0 /*_MatcapColorThemeIndex*/)), float4(1,1,1,1).a);
-				#endif
-				matcap.rgb *= (1.0 /*_MatcapIntensity*/);
-				#if defined(PROP_MATCAPMASK) || !defined(OPTIMIZER_ENABLED)
-				matcapMask = POI2D_SAMPLER_PAN(_MatcapMask, _MainTex, poiUV(poiMesh.uv[(0.0 /*_MatcapMaskUV*/)], float4(1,1,0,0)), float4(0,0,0,0))[(0.0 /*_MatcapMaskChannel*/)];
-				#else
-				matcapMask = 1;
-				#endif
-				if ((0.0 /*_MatcapMaskInvert*/))
-				{
-					matcapMask = 1 - matcapMask;
-				}
-				#ifdef TPS_Penetrator
-				if ((0.0 /*_MatcapTPSDepthEnabled*/))
-				{
-					matcapMask = lerp(0, matcapMask * TPSBufferedDepth(poiMesh.localPos, poiMesh.vertexColor), (1.0 /*_MatcapTPSMaskStrength*/));
-				}
-				#endif
-				poiFragData.alpha *= lerp(1, matcap.a, matcapMask * (0.0 /*_MatcapAlphaOverride*/));
-				if ((1.0 /*_MatcapHueShiftEnabled*/))
-				{
-					matcap.rgb = hueShift(matcap.rgb, _MatcapHueShift + _Time.x * (0.0 /*_MatcapHueShiftSpeed*/));
-				}
-				blendMatcap(poiLight, poiFragData, poiMods, (0.0 /*_MatcapAdd*/), (0.0 /*_MatcapAddToLight*/), (0.204 /*_MatcapMultiply*/), (0.0 /*_MatcapReplace*/), (0.0 /*_MatcapMixed*/), matcap, matcapMask, (0.0 /*_MatcapEmissionStrength*/), (0.0 /*_MatcapLightMask*/), (0.0 /*_MatcapMaskGlobalMask*/), (2.0 /*_MatcapMaskGlobalMaskBlendType*/));
-				#endif
 				#ifdef COLOR_GRADING_HDR_3D
 				float3 normal1 = poiMesh.normals[(1.0 /*_Matcap2Normal*/)];
 				matcapUV = 0;
@@ -3310,7 +3174,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/6d68d538548d24d46ab2388b6
 				float2 mainUV = poiMesh.uv[(0.0 /*_MainTexUV*/)].xy;
 				if ((0.0 /*_MainPixelMode*/))
 				{
-					mainUV = sharpSample(float4(0.0004882813,0.0004882813,2048,2048), mainUV);
+					mainUV = sharpSample(float4(0.001953125,0.001953125,512,512), mainUV);
 				}
 				float4 mainTexture = POI2D_SAMPLER_PAN_STOCHASTIC(_MainTex, _MainTex, poiUV(mainUV, float4(1,1,0,0)), float4(0,0,0,0), (0.0 /*_MainTexStochastic*/));
 				#if defined(PROP_BUMPMAP) || !defined(OPTIMIZER_ENABLED)
@@ -3745,7 +3609,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/6d68d538548d24d46ab2388b6
  #define POI_ENVIRORIM 
  #define POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE 
  #define POI_LIGHT_DATA_ADDITIVE_ENABLE 
- #define POI_MATCAP0 
  #define POI_VERTEXLIGHT_ON 
  #define VIGNETTE_MASKED 
  #define _EMISSION 
@@ -3964,44 +3827,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/6d68d538548d24d46ab2388b6
 			float _LightingAdditiveGradientStart;
 			float _LightingAdditiveGradientEnd;
 			float _LightingAdditiveDetailStrength;
-			#ifdef POI_MATCAP0
-			#if defined(PROP_MATCAP) || !defined(OPTIMIZER_ENABLED)
-			Texture2D _Matcap;
-			float4 _Matcap_ST;
-			float2 _MatcapPan;
-			float _MatcapUV;
-			#endif
-			#if defined(PROP_MATCAPMASK) || !defined(OPTIMIZER_ENABLED)
-			Texture2D _MatcapMask;
-			float4 _MatcapMask_ST;
-			float2 _MatcapMaskPan;
-			float _MatcapMaskUV;
-			float _MatcapMaskChannel;
-			#endif
-			float _MatcapUVMode;
-			float _MatcapMaskInvert;
-			float _MatcapMaskGlobalMask;
-			float _MatcapMaskGlobalMaskBlendType;
-			float _MatcapBorder;
-			float4 _MatcapColor;
-			float _MatcapColorThemeIndex;
-			float _MatcapIntensity;
-			float _MatcapReplace;
-			float _MatcapMultiply;
-			float _MatcapAdd;
-			float _MatcapAddToLight;
-			float _MatcapMixed;
-			float _MatcapAlphaOverride;
-			float _MatcapEnable;
-			float _MatcapLightMask;
-			float _MatcapEmissionStrength;
-			float _MatcapNormal;
-			float _MatcapHueShiftEnabled;
-			float _MatcapHueShiftSpeed;
-			float _MatcapHueShift;
-			float _MatcapTPSDepthEnabled;
-			float _MatcapTPSMaskStrength;
-			#endif
 			#ifdef COLOR_GRADING_HDR_3D
 			#if defined(PROP_MATCAP2) || !defined(OPTIMIZER_ENABLED)
 			Texture2D _Matcap2;
@@ -5879,66 +5704,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/6d68d538548d24d46ab2388b6
 				float4 matcap4 = 0;
 				float matcap4Mask = 0;
 				float2 matcapUV = 0;
-				#ifdef POI_MATCAP0
-				float3 normal0 = poiMesh.normals[(1.0 /*_MatcapNormal*/)];
-				switch((1.0 /*_MatcapUVMode*/))
-				{
-					case 0:
-					{
-						float3 viewNormal = (mul(UNITY_MATRIX_V, float4(normal0, 0))).rgb;
-						float3 NormalBlend_MatCapUV_Detail = viewNormal.rgb * float3(-1, -1, 1);
-						float3 NormalBlend_MatCapUV_Base = (mul(UNITY_MATRIX_V, float4(poiCam.viewDir, 0)).rgb * float3(-1, -1, 1)) + float3(0, 0, 1);
-						float3 noSknewViewNormal = NormalBlend_MatCapUV_Base * dot(NormalBlend_MatCapUV_Base, NormalBlend_MatCapUV_Detail) / NormalBlend_MatCapUV_Base.b - NormalBlend_MatCapUV_Detail;
-						matcapUV = noSknewViewNormal.rg * (0.43 /*_MatcapBorder*/) + 0.5;
-						break;
-					}
-					case 1:
-					{
-						float3 worldViewUp = normalize(float3(0, 1, 0) - poiCam.viewDir * dot(poiCam.viewDir, float3(0, 1, 0)));
-						float3 worldViewRight = normalize(cross(poiCam.viewDir, worldViewUp));
-						matcapUV = float2(dot(worldViewRight, normal0), dot(worldViewUp, normal0)) * (0.43 /*_MatcapBorder*/) + 0.5;
-						break;
-					}
-					case 2:
-					{
-						float3 reflection = reflect(-poiCam.viewDir, normal0);
-						float2 uv = float2(dot(reflection, float3(1, 0, 0)), dot(reflection, float3(0, 1, 0)));
-						matcapUV = uv * (0.43 /*_MatcapBorder*/) + 0.5;
-						break;
-					}
-				}
-				if (IsInMirror())
-				{
-					matcapUV.x = 1 - matcapUV.x;
-				}
-				#if defined(PROP_MATCAP) || !defined(OPTIMIZER_ENABLED)
-				matcap = UNITY_SAMPLE_TEX2D_SAMPLER(_Matcap, _MainTex, TRANSFORM_TEX(matcapUV, _Matcap)) * float4(poiThemeColor(poiMods, float4(1,1,1,1).rgb, (0.0 /*_MatcapColorThemeIndex*/)), float4(1,1,1,1).a);
-				#else
-				matcap = float4(poiThemeColor(poiMods, float4(1,1,1,1).rgb, (0.0 /*_MatcapColorThemeIndex*/)), float4(1,1,1,1).a);
-				#endif
-				matcap.rgb *= (1.0 /*_MatcapIntensity*/);
-				#if defined(PROP_MATCAPMASK) || !defined(OPTIMIZER_ENABLED)
-				matcapMask = POI2D_SAMPLER_PAN(_MatcapMask, _MainTex, poiUV(poiMesh.uv[(0.0 /*_MatcapMaskUV*/)], float4(1,1,0,0)), float4(0,0,0,0))[(0.0 /*_MatcapMaskChannel*/)];
-				#else
-				matcapMask = 1;
-				#endif
-				if ((0.0 /*_MatcapMaskInvert*/))
-				{
-					matcapMask = 1 - matcapMask;
-				}
-				#ifdef TPS_Penetrator
-				if ((0.0 /*_MatcapTPSDepthEnabled*/))
-				{
-					matcapMask = lerp(0, matcapMask * TPSBufferedDepth(poiMesh.localPos, poiMesh.vertexColor), (1.0 /*_MatcapTPSMaskStrength*/));
-				}
-				#endif
-				poiFragData.alpha *= lerp(1, matcap.a, matcapMask * (0.0 /*_MatcapAlphaOverride*/));
-				if ((1.0 /*_MatcapHueShiftEnabled*/))
-				{
-					matcap.rgb = hueShift(matcap.rgb, _MatcapHueShift + _Time.x * (0.0 /*_MatcapHueShiftSpeed*/));
-				}
-				blendMatcap(poiLight, poiFragData, poiMods, (0.0 /*_MatcapAdd*/), (0.0 /*_MatcapAddToLight*/), (0.204 /*_MatcapMultiply*/), (0.0 /*_MatcapReplace*/), (0.0 /*_MatcapMixed*/), matcap, matcapMask, (0.0 /*_MatcapEmissionStrength*/), (0.0 /*_MatcapLightMask*/), (0.0 /*_MatcapMaskGlobalMask*/), (2.0 /*_MatcapMaskGlobalMaskBlendType*/));
-				#endif
 				#ifdef COLOR_GRADING_HDR_3D
 				float3 normal1 = poiMesh.normals[(1.0 /*_Matcap2Normal*/)];
 				matcapUV = 0;
@@ -6273,7 +6038,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/6d68d538548d24d46ab2388b6
 				float2 mainUV = poiMesh.uv[(0.0 /*_MainTexUV*/)].xy;
 				if ((0.0 /*_MainPixelMode*/))
 				{
-					mainUV = sharpSample(float4(0.0004882813,0.0004882813,2048,2048), mainUV);
+					mainUV = sharpSample(float4(0.001953125,0.001953125,512,512), mainUV);
 				}
 				float4 mainTexture = POI2D_SAMPLER_PAN_STOCHASTIC(_MainTex, _MainTex, poiUV(mainUV, float4(1,1,0,0)), float4(0,0,0,0), (0.0 /*_MainTexStochastic*/));
 				#if defined(PROP_BUMPMAP) || !defined(OPTIMIZER_ENABLED)
@@ -6702,7 +6467,6 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/6d68d538548d24d46ab2388b6
  #define POI_ENVIRORIM 
  #define POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE 
  #define POI_LIGHT_DATA_ADDITIVE_ENABLE 
- #define POI_MATCAP0 
  #define POI_VERTEXLIGHT_ON 
  #define VIGNETTE_MASKED 
  #define _EMISSION 
@@ -8236,7 +8000,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/6d68d538548d24d46ab2388b6
 				float2 mainUV = poiMesh.uv[(0.0 /*_MainTexUV*/)].xy;
 				if ((0.0 /*_MainPixelMode*/))
 				{
-					mainUV = sharpSample(float4(0.0004882813,0.0004882813,2048,2048), mainUV);
+					mainUV = sharpSample(float4(0.001953125,0.001953125,512,512), mainUV);
 				}
 				float4 mainTexture = POI2D_SAMPLER_PAN_STOCHASTIC(_MainTex, _MainTex, poiUV(mainUV, float4(1,1,0,0)), float4(0,0,0,0), (0.0 /*_MainTexStochastic*/));
 				#if defined(PROP_BUMPMAP) || !defined(OPTIMIZER_ENABLED)

@@ -18,40 +18,20 @@ MonoBehaviour:
     saved: 0
     defaultValue: 0
     networkSynced: 1
-  - name: Bottom
-    valueType: 0
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
-  - name: Top
-    valueType: 2
-    saved: 1
-    defaultValue: 1
-    networkSynced: 1
-  - name: Panty
-    valueType: 2
-    saved: 1
-    defaultValue: 1
-    networkSynced: 1
-  - name: Sweater
-    valueType: 2
-    saved: 1
-    defaultValue: 1
-    networkSynced: 1
   - name: HairClips
     valueType: 2
     saved: 1
-    defaultValue: 1
+    defaultValue: 0
     networkSynced: 1
   - name: BellBows
     valueType: 2
     saved: 1
-    defaultValue: 1
+    defaultValue: 0
     networkSynced: 1
   - name: HairSwap
     valueType: 2
     saved: 1
-    defaultValue: 0
+    defaultValue: 1
     networkSynced: 1
   - name: Wiskers
     valueType: 2
@@ -61,7 +41,7 @@ MonoBehaviour:
   - name: ChestSize
     valueType: 1
     saved: 1
-    defaultValue: 1
+    defaultValue: 0
     networkSynced: 1
   - name: AllSounds
     valueType: 2
@@ -81,7 +61,7 @@ MonoBehaviour:
   - name: Glasses
     valueType: 2
     saved: 1
-    defaultValue: 1
+    defaultValue: 0
     networkSynced: 1
   - name: GlassesPlace
     valueType: 2
@@ -93,30 +73,35 @@ MonoBehaviour:
     saved: 1
     defaultValue: 0
     networkSynced: 1
-  - name: EyeHue
-    valueType: 1
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
-  - name: EyeSaturation
+  - name: SkinShade
     valueType: 1
     saved: 1
     defaultValue: 0.5
     networkSynced: 1
+  - name: SkinSat
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: EyeHue
+    valueType: 1
+    saved: 1
+    defaultValue: 0.5
+    networkSynced: 1
+  - name: EyeSaturation
+    valueType: 1
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
   - name: Interactions
     valueType: 2
     saved: 1
-    defaultValue: 0
+    defaultValue: 1
     networkSynced: 1
   - name: Particles
     valueType: 2
     saved: 1
-    defaultValue: 0
-    networkSynced: 1
-  - name: SkinShade
-    valueType: 1
-    saved: 1
-    defaultValue: 0
+    defaultValue: 1
     networkSynced: 1
   - name: Go/Float
     valueType: 1
@@ -158,11 +143,6 @@ MonoBehaviour:
     saved: 1
     defaultValue: 1
     networkSynced: 1
-  - name: SweaterSetHue
-    valueType: 1
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
   - name: AccHue
     valueType: 1
     saved: 1
@@ -202,11 +182,6 @@ MonoBehaviour:
     valueType: 2
     saved: 1
     defaultValue: 1
-    networkSynced: 1
-  - name: SkinSat
-    valueType: 1
-    saved: 1
-    defaultValue: 0.5
     networkSynced: 1
   - name: ArmFluff
     valueType: 2
@@ -328,11 +303,6 @@ MonoBehaviour:
     saved: 1
     defaultValue: 1
     networkSynced: 1
-  - name: Teddy
-    valueType: 2
-    saved: 1
-    defaultValue: 1
-    networkSynced: 1
   - name: PJSetHue
     valueType: 1
     saved: 1
@@ -363,26 +333,6 @@ MonoBehaviour:
     saved: 1
     defaultValue: 0
     networkSynced: 1
-  - name: TeddyHue
-    valueType: 1
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
-  - name: TeddyPlace
-    valueType: 0
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
-  - name: TeddyDrop
-    valueType: 2
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
-  - name: TeddySize
-    valueType: 1
-    saved: 1
-    defaultValue: 0.2
-    networkSynced: 1
   - name: LightBlink
     valueType: 2
     saved: 1
@@ -397,4 +347,9 @@ MonoBehaviour:
     valueType: 1
     saved: 1
     defaultValue: 0
+    networkSynced: 1
+  - name: EarsScale
+    valueType: 1
+    saved: 1
+    defaultValue: 0.5
     networkSynced: 1

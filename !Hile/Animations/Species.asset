@@ -55,3 +55,14 @@ MonoBehaviour:
     subParameters:
     - name: Tail
     labels: []
+  - name: EarsScale
+    icon: {fileID: 2800000, guid: 37a5d92533143144a86eb01ad2be2b60, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: EarsScale
+    labels: []
