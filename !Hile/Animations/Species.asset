@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Species
   m_EditorClassIdentifier: 
   controls:
-  - name: Markings (OLD)
-    icon: {fileID: 2800000, guid: 0e5d1a0b637281b4db947a2c30166f91, type: 3}
-    type: 103
-    parameter:
-      name: 
-    value: 0
-    style: 0
-    subMenu: {fileID: 11400000, guid: abe8cd95805e75d4caeb89ec5f3757b3, type: 2}
-    subParameters: []
-    labels: []
   - name: Body Floof
     icon: {fileID: 2800000, guid: 3a540918ec8012b45a06223246a88979, type: 3}
     type: 103
