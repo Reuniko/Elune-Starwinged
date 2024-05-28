@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Species
   m_EditorClassIdentifier: 
   controls:
-  - name: Markings
+  - name: Markings (OLD)
     icon: {fileID: 2800000, guid: 0e5d1a0b637281b4db947a2c30166f91, type: 3}
     type: 103
     parameter:
@@ -33,17 +33,6 @@ MonoBehaviour:
     subMenu: {fileID: 11400000, guid: 66d852ee6123c1f49ad2ab461267b3b4, type: 2}
     subParameters: []
     labels: []
-  - name: Ears
-    icon: {fileID: 2800000, guid: 07223fed0b9dcef46b998057c4151ed4, type: 3}
-    type: 203
-    parameter:
-      name: 
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters:
-    - name: Ears
-    labels: []
   - name: Tail
     icon: {fileID: 2800000, guid: 58ad1151cdaa57040a4a1fc39a4d104e, type: 3}
     type: 203
@@ -55,6 +44,17 @@ MonoBehaviour:
     subParameters:
     - name: Tail
     labels: []
+  - name: Ears
+    icon: {fileID: 2800000, guid: 07223fed0b9dcef46b998057c4151ed4, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: Ears
+    labels: []
   - name: EarsScale
     icon: {fileID: 2800000, guid: 37a5d92533143144a86eb01ad2be2b60, type: 3}
     type: 203
@@ -65,4 +65,15 @@ MonoBehaviour:
     subMenu: {fileID: 0}
     subParameters:
     - name: EarsScale
+    labels: []
+  - name: Markings
+    icon: {fileID: 2800000, guid: 0e5d1a0b637281b4db947a2c30166f91, type: 3}
+    type: 203
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: Markings
     labels: []
