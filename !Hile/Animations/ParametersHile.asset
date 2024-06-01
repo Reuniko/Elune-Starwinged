@@ -353,3 +353,13 @@ MonoBehaviour:
     saved: 1
     defaultValue: 0.5
     networkSynced: 1
+  - name: TrailsToggle
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: Trails SoundToggle
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1

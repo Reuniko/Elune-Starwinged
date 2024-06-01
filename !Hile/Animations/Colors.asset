@@ -57,3 +57,13 @@ MonoBehaviour:
     subParameters:
     - name: SkinSat
     labels: []
+  - name: Other Stuff
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 7fc8530f11b83a240bef0a0cd82845d6, type: 2}
+    subParameters: []
+    labels: []
