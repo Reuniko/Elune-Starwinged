@@ -34554,14 +34554,14 @@ MonoBehaviour:
   ignoreTransforms: []
   endpointPosition: {x: 0, y: 0, z: 0}
   multiChildType: 0
-  pull: 0.2
+  pull: 0.66
   pullCurve:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  spring: 0.2
+  spring: 0
   springCurve:
     serializedVersion: 2
     m_Curve: []
@@ -34610,7 +34610,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   colliders: []
   limitType: 1
-  maxAngleX: 4
+  maxAngleX: 3
   maxAngleXCurve:
     serializedVersion: 2
     m_Curve: []

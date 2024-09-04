@@ -23,26 +23,6 @@ MonoBehaviour:
     subMenu: {fileID: 0}
     subParameters: []
     labels: []
-  - name: Tail Charm
-    icon: {fileID: 2800000, guid: 59a95098086070445b28835b655b7cc3, type: 3}
-    type: 102
-    parameter:
-      name: TailAcc
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
-  - name: Bell Charm
-    icon: {fileID: 2800000, guid: 93a96e4cedb83d94a88edbcb7a37a103, type: 3}
-    type: 102
-    parameter:
-      name: BellAcc
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
   - name: Hair Clips
     icon: {fileID: 2800000, guid: 691ad85c8dac0f34583183462483f4b4, type: 3}
     type: 102

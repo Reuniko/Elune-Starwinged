@@ -63,7 +63,7 @@ MonoBehaviour:
     subMenu: {fileID: 11400000, guid: 656242af573546144966b3b01821aa37, type: 2}
     subParameters: []
     labels: []
-  - name: Hair and Body
+  - name: Body
     icon: {fileID: 2800000, guid: 7eba437b86694d540884262192bee714, type: 3}
     type: 103
     parameter:

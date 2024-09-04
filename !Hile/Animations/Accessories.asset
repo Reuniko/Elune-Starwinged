@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: Accessories
   m_EditorClassIdentifier: 
   controls:
-  - name: Lights
-    icon: {fileID: 2800000, guid: 55395561c6590fd47b4396af769602e4, type: 3}
-    type: 102
-    parameter:
-      name: Lights
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
   - name: Glasses
     icon: {fileID: 2800000, guid: 515486af2c5ac2a43a98fd2fdc8f53af, type: 3}
     type: 102
@@ -68,16 +58,6 @@ MonoBehaviour:
     type: 102
     parameter:
       name: Metal
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
-  - name: Gingerbread
-    icon: {fileID: 2800000, guid: 2e4d2836d5a62c14e9c07a447a89e220, type: 3}
-    type: 102
-    parameter:
-      name: Gingerbread
     value: 1
     style: 0
     subMenu: {fileID: 0}
