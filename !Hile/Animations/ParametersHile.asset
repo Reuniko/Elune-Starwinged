@@ -176,7 +176,7 @@ MonoBehaviour:
   - name: NeckFluff
     valueType: 2
     saved: 1
-    defaultValue: 1
+    defaultValue: 0
     networkSynced: 1
   - name: StripesColor
     valueType: 2
@@ -286,7 +286,7 @@ MonoBehaviour:
   - name: HeartNecklace
     valueType: 2
     saved: 1
-    defaultValue: 1
+    defaultValue: 0
     networkSynced: 1
   - name: TailAcc
     valueType: 2
