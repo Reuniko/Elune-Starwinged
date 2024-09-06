@@ -51,7 +51,7 @@ MonoBehaviour:
   - name: Tail
     valueType: 1
     saved: 1
-    defaultValue: 0
+    defaultValue: 0.3
     networkSynced: 1
   - name: Ears
     valueType: 1
@@ -76,7 +76,7 @@ MonoBehaviour:
   - name: SkinShade
     valueType: 1
     saved: 1
-    defaultValue: 0.5
+    defaultValue: 0.6
     networkSynced: 1
   - name: SkinSat
     valueType: 1
@@ -86,12 +86,12 @@ MonoBehaviour:
   - name: EyeHue
     valueType: 1
     saved: 1
-    defaultValue: 0.5
+    defaultValue: 0.75
     networkSynced: 1
   - name: EyeSaturation
     valueType: 1
     saved: 1
-    defaultValue: 0
+    defaultValue: 1
     networkSynced: 1
   - name: Interactions
     valueType: 2
@@ -171,7 +171,7 @@ MonoBehaviour:
   - name: ChestFluff
     valueType: 2
     saved: 1
-    defaultValue: 1
+    defaultValue: 0
     networkSynced: 1
   - name: NeckFluff
     valueType: 2
@@ -351,7 +351,7 @@ MonoBehaviour:
   - name: EarsScale
     valueType: 1
     saved: 1
-    defaultValue: 0.5
+    defaultValue: 0.33
     networkSynced: 1
   - name: TrailsToggle
     valueType: 2
@@ -362,4 +362,19 @@ MonoBehaviour:
     valueType: 2
     saved: 1
     defaultValue: 0
+    networkSynced: 1
+  - name: WingsH
+    valueType: 1
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: WingsV
+    valueType: 1
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: WingsToggle
+    valueType: 2
+    saved: 1
+    defaultValue: 1
     networkSynced: 1

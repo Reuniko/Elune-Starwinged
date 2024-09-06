@@ -73,16 +73,26 @@ MonoBehaviour:
     subMenu: {fileID: 11400000, guid: 8145046719efd9e4a8e22a722c38d9e7, type: 2}
     subParameters: []
     labels: []
-  - name: Colors
-    icon: {fileID: 2800000, guid: 8382a4267faca714bab447bb91aadb2a, type: 3}
-    type: 103
+  - name: Wings
+    icon: {fileID: 2800000, guid: b2e4c489dd9685d4896390e0e792192d, type: 3}
+    type: 201
     parameter:
       name: 
     value: 0
     style: 0
     subMenu: {fileID: 11400000, guid: 11ce1029baeb42b4f85a403b6288ee9f, type: 2}
-    subParameters: []
-    labels: []
+    subParameters:
+    - name: WingsH
+    - name: WingsV
+    labels:
+    - name: 
+      icon: {fileID: 0}
+    - name: 
+      icon: {fileID: 0}
+    - name: 
+      icon: {fileID: 0}
+    - name: 
+      icon: {fileID: 0}
   - name: Toggles
     icon: {fileID: 2800000, guid: 1943035365fa0b04abe43ffd475e4a3a, type: 3}
     type: 103

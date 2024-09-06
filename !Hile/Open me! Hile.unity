@@ -2115,6 +2115,110 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!1001 &473733415
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 942979508}
+    m_Modifications:
+    - target: {fileID: 833998109077563275, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206935859982203786, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4931
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9985861
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.053158328
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000011904057
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000006337019
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7978190368688684905, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+        type: 3}
+      propertyPath: m_Name
+      value: Ethereal Wings
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9fec7c14c576a7d44bb59242e6a90d1c, type: 3}
+--- !u!4 &473733416 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7346472093654050259, guid: 9fec7c14c576a7d44bb59242e6a90d1c,
+    type: 3}
+  m_PrefabInstance: {fileID: 473733415}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &488171136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15157,6 +15261,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1145614269}
+    - targetCorrespondingSourceObject: {fileID: 5021325835207809696, guid: d2a8e9d9e690ba74887ec1e7f3001810,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 473733416}
     - targetCorrespondingSourceObject: {fileID: 5952923860221299028, guid: d2a8e9d9e690ba74887ec1e7f3001810,
         type: 3}
       insertIndex: -1
@@ -19282,6 +19390,14 @@ MonoBehaviour:
     name: ONTrails Sound
   - hash: 265806720
     name: OFFTrails Sound
+  - hash: 1564580561
+    name: Wait
+  - hash: 1121297892
+    name: Wings_ON
+  - hash: 574714596
+    name: Wings_OFF
+  - hash: 2089719356
+    name: Puppet Controls
   autoFootsteps: 1
   autoLocomotion: 0
   collider_head:
