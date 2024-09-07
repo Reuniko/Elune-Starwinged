@@ -44,16 +44,6 @@ MonoBehaviour:
     subMenu: {fileID: 0}
     subParameters: []
     labels: []
-  - name: Whiskers
-    icon: {fileID: 2800000, guid: 44f0ca9c3845eb94096f24b084ab16d8, type: 3}
-    type: 102
-    parameter:
-      name: Wiskers
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters: []
-    labels: []
   - name: Fur/Hair Emiss
     icon: {fileID: 2800000, guid: d33661be9566c3f40b5c72cd8f633a6e, type: 3}
     type: 203
