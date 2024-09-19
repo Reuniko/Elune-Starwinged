@@ -42,7 +42,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: "blendShape.\u25B2"
+    attribute: "blendShape.\u03C9"
     path: Body
     classID: 137
     script: {fileID: 0}
@@ -57,7 +57,7 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 2073732236
-      attribute: 1465066208
+      attribute: 2581586682
       script: {fileID: 0}
       typeID: 137
       customType: 20
@@ -111,7 +111,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: "blendShape.\u25B2"
+    attribute: "blendShape.\u03C9"
     path: Body
     classID: 137
     script: {fileID: 0}
