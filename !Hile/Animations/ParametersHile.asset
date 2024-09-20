@@ -378,3 +378,13 @@ MonoBehaviour:
     saved: 1
     defaultValue: 1
     networkSynced: 1
+  - name: BraToggle
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: ShortsToggle
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1

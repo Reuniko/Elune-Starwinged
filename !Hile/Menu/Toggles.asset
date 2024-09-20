@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controls:
   - name: Trails
-    icon: {fileID: 0}
+    icon: {fileID: 2800000, guid: 8df3222a388efd442b776ae5f0e2097d, type: 3}
     type: 102
     parameter:
       name: TrailsToggle
@@ -24,7 +24,7 @@ MonoBehaviour:
     subParameters: []
     labels: []
   - name: Trails Sound
-    icon: {fileID: 0}
+    icon: {fileID: 2800000, guid: 554c56b53d6033344ac9188a252a1b76, type: 3}
     type: 102
     parameter:
       name: Trails SoundToggle
@@ -38,6 +38,26 @@ MonoBehaviour:
     type: 102
     parameter:
       name: WingsToggle
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Shorts
+    icon: {fileID: 2800000, guid: ca9bf8f8e3c7f3141bb76dca36a2c57a, type: 3}
+    type: 102
+    parameter:
+      name: ShortsToggle
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Bra
+    icon: {fileID: 2800000, guid: 91ca95e2804796046a631b5f30ac69c1, type: 3}
+    type: 102
+    parameter:
+      name: BraToggle
     value: 1
     style: 0
     subMenu: {fileID: 0}

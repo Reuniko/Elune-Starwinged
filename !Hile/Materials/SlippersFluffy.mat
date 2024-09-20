@@ -654,6 +654,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _RimShadeMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _RimTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -1365,6 +1369,7 @@ Material:
     - _DstBlendAlpha: 10
     - _DstBlendAlphaFA: 1
     - _DstBlendFA: 1
+    - _DummyProperty: 0
     - _Emission2ndBlend: 1
     - _Emission2ndBlendMode: 1
     - _Emission2ndFluorescence: 0
@@ -1938,6 +1943,8 @@ Material:
     - _IDMask6: 0
     - _IDMask7: 0
     - _IDMask8: 0
+    - _IDMaskCompile: 0
+    - _IDMaskControlsDissolve: 0
     - _IDMaskFrom: 8
     - _IDMaskIndex1: 0
     - _IDMaskIndex2: 0
@@ -1947,6 +1954,15 @@ Material:
     - _IDMaskIndex6: 0
     - _IDMaskIndex7: 0
     - _IDMaskIndex8: 0
+    - _IDMaskIsBitmap: 0
+    - _IDMaskPrior1: 0
+    - _IDMaskPrior2: 0
+    - _IDMaskPrior3: 0
+    - _IDMaskPrior4: 0
+    - _IDMaskPrior5: 0
+    - _IDMaskPrior6: 0
+    - _IDMaskPrior7: 0
+    - _IDMaskPrior8: 0
     - _IgnoreCastedShadows: 0
     - _IgnoreEncryption: 0
     - _IgnoreFog: 0
@@ -2636,6 +2652,10 @@ Material:
     - _RimMaskUV: 0
     - _RimNormalStrength: 1
     - _RimPower: 1
+    - _RimShadeBlur: 1
+    - _RimShadeBorder: 0.5
+    - _RimShadeFresnelPower: 1
+    - _RimShadeNormalStrength: 1
     - _RimShadowMask: 0.5
     - _RimShadowMaskInvert: 0
     - _RimShadowMaskRampType: 0
@@ -2794,6 +2814,7 @@ Material:
     - _Tweak_LightDirection_MaskLevel2: 0
     - _Tweak_Rim2LightMaskLevel: 0
     - _Tweak_RimLightMaskLevel: 0
+    - _UDIMDiscardCompile: 0
     - _UDIMDiscardHelpbox: 0
     - _UDIMDiscardMode: 0
     - _UDIMDiscardRow0_0: 0
@@ -2858,6 +2879,7 @@ Material:
     - _UseParallax: 0
     - _UseReflection: 0
     - _UseRim: 0
+    - _UseRimShade: 0
     - _UseShadow: 1
     - _Use_1stAs2nd: 0
     - _Use_1stShadeMapAlpha_As_ShadowMask: 0
@@ -2940,7 +2962,7 @@ Material:
     - _glitterFrequencyLinearEmissive: 20
     - _lilDirectionalLightStrength: 1
     - _lilShadowCasterBias: 0
-    - _lilToonVersion: 34
+    - _lilToonVersion: 43
     - footer_discord: 0
     - footer_github: 0
     - footer_patreon: 0
@@ -3669,6 +3691,7 @@ Material:
     - _RimIndirColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimMaskPan: {r: 0, g: 0, b: 0, a: 0}
+    - _RimShadeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _RimShadowAlpha: {r: 0, g: 0, b: 0, a: 1}
     - _RimTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _SDFForward: {r: 0, g: 0, b: 1, a: 0}

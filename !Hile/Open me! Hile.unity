@@ -28207,6 +28207,16 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7311254465461002018, guid: d2a8e9d9e690ba74887ec1e7f3001810,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: febad3200ad48cd42ab0a1c86bb9158c, type: 2}
+    - target: {fileID: -7296742891649885728, guid: d2a8e9d9e690ba74887ec1e7f3001810,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -7167811414348804045, guid: d2a8e9d9e690ba74887ec1e7f3001810,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -28612,6 +28622,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.0027259432
       objectReference: {fileID: 0}
+    - target: {fileID: -6159890256553221502, guid: d2a8e9d9e690ba74887ec1e7f3001810,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: febad3200ad48cd42ab0a1c86bb9158c, type: 2}
     - target: {fileID: -6124465101995068151, guid: d2a8e9d9e690ba74887ec1e7f3001810,
         type: 3}
       propertyPath: m_IsActive
@@ -42065,8 +42080,6 @@ MonoBehaviour:
     name: Buldge off
   - hash: 48993725
     name: Bulge on
-  - hash: -1545204045
-    name: Clothes on
   - hash: -1840529503
     name: BellBows on
   - hash: 524908841
@@ -42289,6 +42302,18 @@ MonoBehaviour:
     name: Wings_OFF
   - hash: 2089719356
     name: Puppet Controls
+  - hash: -1865754777
+    name: IDLEBra
+  - hash: 498432343
+    name: ONBra
+  - hash: -416040967
+    name: OFFBra
+  - hash: 1712531198
+    name: IDLEShorts
+  - hash: 2118718919
+    name: ONShorts
+  - hash: -850315368
+    name: OFFShorts
   autoFootsteps: 1
   autoLocomotion: 0
   collider_head:
