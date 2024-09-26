@@ -388,3 +388,8 @@ MonoBehaviour:
     saved: 1
     defaultValue: 1
     networkSynced: 1
+  - name: StarRingToggle
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
