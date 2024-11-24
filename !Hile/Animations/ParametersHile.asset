@@ -31,7 +31,7 @@ MonoBehaviour:
   - name: HairSwap
     valueType: 2
     saved: 1
-    defaultValue: 1
+    defaultValue: 0
     networkSynced: 1
   - name: Wiskers
     valueType: 2
