@@ -42761,6 +42761,10 @@ MonoBehaviour:
     name: ONStarRing
   - hash: 344255037
     name: OFFStarRing
+  - hash: 1074816826
+    name: Curse_Off
+  - hash: -824335208
+    name: Curse_On
   autoFootsteps: 1
   autoLocomotion: 0
   collider_head:

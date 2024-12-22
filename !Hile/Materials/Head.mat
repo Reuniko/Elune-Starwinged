@@ -8,22 +8,30 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Head
-  m_Shader: {fileID: 4800000, guid: 97f34be876f8f444297a83daf7dad1e5, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7183892a99439224dbe421098b512ef3, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
+  - COLOR_GRADING_HDR
+  - POI_ENVIRORIM
+  - POI_MATCAP0
+  - VIGNETTE_MASKED
   - _LIGHTINGMODE_FLAT
+  - _RIM2STYLE_POIYOMI
+  - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: 2000
   stringTagMap:
-    AllLockedGUIDS: 3dce1a333dce1c74eba8e975dbe1656d,b99166eb2ef04e3419e2858508c596d4
-    OriginalKeywords: _LIGHTINGMODE_FLAT _STOCHASTICMODE_DELIOT_HEITZ
+    AllLockedGUIDS: b99166eb2ef04e3419e2858508c596d4
+    OriginalKeywords: COLOR_GRADING_HDR POI_ENVIRORIM POI_MATCAP0 VIGNETTE_MASKED
+      _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
     OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Toon Outline
-    RenderType: TransparentCutout
+    RenderType: Opaque
+    _AlphaPremultiplyAnimated: 1
     _LightingCapAnimated: 1
     _LightingMinLightBrightnessAnimated: 1
     _MainHueShiftAnimated: 1
@@ -91,7 +99,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClippingMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3a6a6b27bffcbd94d8045ac3d6bfb8d5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClothDFG:
@@ -863,7 +871,7 @@ Material:
     - _CurvFix: 1
     - _CurvatureU: 0
     - _CurvatureV: 0
-    - _Cutoff: 0.5
+    - _Cutoff: 0
     - _Decal0ApplyGlobalMaskBlendType: 0
     - _Decal0ApplyGlobalMaskIndex: 0
     - _Decal0ChannelSeparation: 0
@@ -1883,7 +1891,7 @@ Material:
     - _MochieSpecularStrengthGlobalMask: 0
     - _MochieSpecularStrengthGlobalMaskBlendType: 2
     - _MochieSpecularTintThemeIndex: 0
-    - _Mode: 1
+    - _Mode: 0
     - _ModelAngleMax: 90
     - _ModelAngleMin: 45
     - _MultilayerMathBlurMapUV: 0
@@ -1904,7 +1912,7 @@ Material:
     - _OutlineClipAtZeroWidth: 0
     - _OutlineCull: 1
     - _OutlineDstBlend: 0
-    - _OutlineDstBlendAlpha: 1
+    - _OutlineDstBlendAlpha: 0
     - _OutlineEmission: 0
     - _OutlineExpansionMode: 1
     - _OutlineFixWidth: 0.5
@@ -2622,7 +2630,7 @@ Material:
     - m_specialFXCategory: 0
     - m_start_ALDecalSpectrum: 0
     - m_start_ALVolumeColor: 0
-    - m_start_Alpha: 0
+    - m_start_Alpha: 1
     - m_start_AlphaGlobalMask: 0
     - m_start_Aniso: 0
     - m_start_BlackLightMasking: 0

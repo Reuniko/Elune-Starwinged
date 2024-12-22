@@ -28,14 +28,16 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: 2000
   stringTagMap:
     AllLockedGUIDS: ce48d4d7b150b1b4594554298d636137
     OriginalKeywords: COLOR_GRADING_HDR DEPTH_OF_FIELD_COC_VIEW GEOM_TYPE_BRANCH
       GEOM_TYPE_BRANCH_DETAIL GEOM_TYPE_FROND POI_ENVIRORIM POI_MATCAP0 VIGNETTE_MASKED
       _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
     OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Toon Outline
-    RenderType: TransparentCutout
+    RenderType: Opaque
+    _AlphaModAnimated: 1
+    _AlphaPremultiplyAnimated: 1
     _DecalBlendAlpha1Animated: 1
     _DecalBlendAlpha2Animated: 1
     _DecalBlendAlpha3Animated: 1
@@ -64,7 +66,7 @@ Material:
     _UDIMDiscardRow2_2Animated: 1
     _UDIMDiscardRow2_3Animated: 1
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _EnableOutlines
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -117,7 +119,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClippingMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: cd75483ce6ab642429e81764e56a36e8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ClothDFG:
@@ -1909,7 +1911,7 @@ Material:
     - _MochieSpecularStrengthGlobalMask: 0
     - _MochieSpecularStrengthGlobalMaskBlendType: 2
     - _MochieSpecularTintThemeIndex: 0
-    - _Mode: 1
+    - _Mode: 0
     - _ModelAngleMax: 90
     - _ModelAngleMin: 45
     - _MultilayerMathBlurMapUV: 0
@@ -1930,7 +1932,7 @@ Material:
     - _OutlineClipAtZeroWidth: 0
     - _OutlineCull: 1
     - _OutlineDstBlend: 0
-    - _OutlineDstBlendAlpha: 1
+    - _OutlineDstBlendAlpha: 0
     - _OutlineEmission: 0
     - _OutlineExpansionMode: 1
     - _OutlineFixWidth: 0.5
@@ -2503,7 +2505,7 @@ Material:
     - g_start_deliot: 0
     - g_start_hextile: 0
     - m_AudioLinkCategory: 0
-    - m_OutlineCategory: 1
+    - m_OutlineCategory: 0
     - m_end_ALDecalSpectrum: 0
     - m_end_ALVolumeColor: 0
     - m_end_Alpha: 0
@@ -2640,7 +2642,7 @@ Material:
     - m_end_vertexGlitching: 0
     - m_end_vertexManipulation: 0
     - m_end_videoEffects: 0
-    - m_lightingCategory: 1
+    - m_lightingCategory: 0
     - m_mainCategory: 1
     - m_modifierCategory: 0
     - m_postprocessing: 0
@@ -2648,8 +2650,8 @@ Material:
     - m_specialFXCategory: 0
     - m_start_ALDecalSpectrum: 0
     - m_start_ALVolumeColor: 0
-    - m_start_Alpha: 0
-    - m_start_AlphaGlobalMask: 0
+    - m_start_Alpha: 1
+    - m_start_AlphaGlobalMask: 1
     - m_start_Aniso: 0
     - m_start_BlackLightMasking: 0
     - m_start_BonusSliders: 0
@@ -2664,7 +2666,7 @@ Material:
     - m_start_Decal2AudioLink: 0
     - m_start_Decal3: 1
     - m_start_Decal3AudioLink: 0
-    - m_start_DecalSection: 1
+    - m_start_DecalSection: 0
     - m_start_DepthBulge: 0
     - m_start_DetailOptions: 0
     - m_start_DistortionAudioLink: 0
@@ -2672,7 +2674,7 @@ Material:
     - m_start_FlipbookAudioLink: 0
     - m_start_Gameboy: 0
     - m_start_GlitterRandomStuff: 0
-    - m_start_GlobalMask: 0
+    - m_start_GlobalMask: 1
     - m_start_GlobalMaskDistanceM_0: 0
     - m_start_GlobalMaskDistanceM_1: 0
     - m_start_GlobalMaskDistanceM_10: 0
@@ -2704,7 +2706,7 @@ Material:
     - m_start_Iridescence: 0
     - m_start_IridescenceAudioLink: 0
     - m_start_MainHueShift: 1
-    - m_start_MainHueShiftGlobalMask: 0
+    - m_start_MainHueShiftGlobalMask: 1
     - m_start_MainVertexColors: 0
     - m_start_Matcap2: 0
     - m_start_Matcap3: 0
@@ -2714,8 +2716,8 @@ Material:
     - m_start_OutlineStencilPassBackOptions: 0
     - m_start_OutlineStencilPassFrontOptions: 0
     - m_start_PathAudioLink: 0
-    - m_start_PoiLightData: 1
-    - m_start_PoiShading: 1
+    - m_start_PoiLightData: 0
+    - m_start_PoiShading: 0
     - m_start_RGBAColors: 0
     - m_start_RGBMask: 0
     - m_start_Rim2AudioLink: 0
@@ -2758,7 +2760,7 @@ Material:
     - m_start_flipBook: 0
     - m_start_glitter: 0
     - m_start_internalparallax: 0
-    - m_start_matcap: 1
+    - m_start_matcap: 0
     - m_start_mirrorOptions: 0
     - m_start_normalCorrect: 0
     - m_start_outlineAdvanced: 0

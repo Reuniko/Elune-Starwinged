@@ -784,6 +784,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
  #define VIGNETTE_MASKED 
  #define _LIGHTINGMODE_FLAT 
  #define _STOCHASTICMODE_DELIOT_HEITZ 
+ #define PROP_CLIPPINGMASK 
  #define PROP_DECALTEXTURE 
  #define PROP_DECALTEXTURE1 
  #define PROP_DECALTEXTURE2 
@@ -2688,7 +2689,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
 			#endif // defined(_STOCHASTICMODE_HEXTILE)
 			void applyAlphaOptions(inout PoiFragData poiFragData, in PoiMesh poiMesh, in PoiCam poiCam, in PoiMods poiMods)
 			{
-				poiFragData.alpha = saturate(poiFragData.alpha + (0.0 /*_AlphaMod*/));
+				poiFragData.alpha = saturate(poiFragData.alpha + _AlphaMod);
 				if ((0.0 /*_AlphaGlobalMask*/) > 0)
 				{
 					poiFragData.alpha = customBlend(poiFragData.alpha, poiMods.globalMask[(0.0 /*_AlphaGlobalMask*/)-1], (2.0 /*_AlphaGlobalMaskBlendType*/));
@@ -4024,7 +4025,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
 				applyMatcap(poiFragData, poiCam, poiMesh, poiLight, poiMods);
 				#endif
 				
-				if ((0.0 /*_AlphaPremultiply*/))
+				if (_AlphaPremultiply)
 				{
 					poiFragData.baseColor *= saturate(poiFragData.alpha);
 				}
@@ -4043,12 +4044,12 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
 				poiFragData.emission = max(poiFragData.emission * (1.0 /*_PPEmissionMultiplier*/), 0);
 				poiFragData.finalColor = max(poiFragData.finalColor * (1.0 /*_PPFinalColorMultiplier*/), 0);
 				#endif
-				if ((1.0 /*_Mode*/) == POI_MODE_OPAQUE)
+				if ((0.0 /*_Mode*/) == POI_MODE_OPAQUE)
 				{
 					poiFragData.alpha = 1;
 				}
 				clip(poiFragData.alpha - (0.5 /*_Cutoff*/));
-				if ((1.0 /*_Mode*/) == POI_MODE_CUTOUT && !(0.0 /*_AlphaToCoverage*/))
+				if ((0.0 /*_Mode*/) == POI_MODE_CUTOUT && !(0.0 /*_AlphaToCoverage*/))
 				{
 					poiFragData.alpha = 1;
 				}
@@ -4085,6 +4086,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
  #define VIGNETTE_MASKED 
  #define _LIGHTINGMODE_FLAT 
  #define _STOCHASTICMODE_DELIOT_HEITZ 
+ #define PROP_CLIPPINGMASK 
  #define PROP_DECALTEXTURE 
  #define PROP_DECALTEXTURE1 
  #define PROP_DECALTEXTURE2 
@@ -5754,7 +5756,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
 			#endif // defined(_STOCHASTICMODE_HEXTILE)
 			void applyAlphaOptions(inout PoiFragData poiFragData, in PoiMesh poiMesh, in PoiCam poiCam, in PoiMods poiMods)
 			{
-				poiFragData.alpha = saturate(poiFragData.alpha + (0.0 /*_AlphaMod*/));
+				poiFragData.alpha = saturate(poiFragData.alpha + _AlphaMod);
 				if ((0.0 /*_AlphaGlobalMask*/) > 0)
 				{
 					poiFragData.alpha = customBlend(poiFragData.alpha, poiMods.globalMask[(0.0 /*_AlphaGlobalMask*/)-1], (2.0 /*_AlphaGlobalMaskBlendType*/));
@@ -6522,7 +6524,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
 				poiLight.rampedLightMap = poiEdgeNonLinear(poiLight.nDotL, 0.1, .1);
 				#endif
 				
-				if ((0.0 /*_AlphaPremultiply*/))
+				if (_AlphaPremultiply)
 				{
 					poiFragData.baseColor *= saturate(poiFragData.alpha);
 				}
@@ -6533,7 +6535,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
 					UNITY_APPLY_FOG(i.fogCoord, poiFragData.finalColor);
 				}
 				poiFragData.alpha = (0.0 /*_AlphaForceOpaque*/) ? 1 : poiFragData.alpha;
-				if ((1.0 /*_Mode*/) == POI_MODE_OPAQUE)
+				if ((0.0 /*_Mode*/) == POI_MODE_OPAQUE)
 				{
 					poiFragData.alpha = 1;
 				}
@@ -6574,6 +6576,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
  #define VIGNETTE_MASKED 
  #define _LIGHTINGMODE_FLAT 
  #define _STOCHASTICMODE_DELIOT_HEITZ 
+ #define PROP_CLIPPINGMASK 
  #define PROP_DECALTEXTURE 
  #define PROP_DECALTEXTURE1 
  #define PROP_DECALTEXTURE2 
@@ -8473,7 +8476,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
 			#endif // defined(_STOCHASTICMODE_HEXTILE)
 			void applyAlphaOptions(inout PoiFragData poiFragData, in PoiMesh poiMesh, in PoiCam poiCam, in PoiMods poiMods)
 			{
-				poiFragData.alpha = saturate(poiFragData.alpha + (0.0 /*_AlphaMod*/));
+				poiFragData.alpha = saturate(poiFragData.alpha + _AlphaMod);
 				if ((0.0 /*_AlphaGlobalMask*/) > 0)
 				{
 					poiFragData.alpha = customBlend(poiFragData.alpha, poiMods.globalMask[(0.0 /*_AlphaGlobalMask*/)-1], (2.0 /*_AlphaGlobalMaskBlendType*/));
@@ -9808,7 +9811,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
 				#if defined(POI_MATCAP0) || defined(COLOR_GRADING_HDR_3D) || defined(POI_MATCAP2) || defined(POI_MATCAP3)
 				applyMatcap(poiFragData, poiCam, poiMesh, poiLight, poiMods);
 				#endif
-				if ((0.0 /*_AlphaPremultiply*/))
+				if (_AlphaPremultiply)
 				{
 					poiFragData.baseColor *= saturate(poiFragData.alpha);
 				}
@@ -9823,12 +9826,12 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
 				}
 				poiFragData.alpha = (0.0 /*_AlphaForceOpaque*/) ? 1 : poiFragData.alpha;
 				poiFragData.finalColor += poiLight.finalLightAdd;
-				if ((1.0 /*_Mode*/) == POI_MODE_OPAQUE)
+				if ((0.0 /*_Mode*/) == POI_MODE_OPAQUE)
 				{
 					poiFragData.alpha = 1;
 				}
 				clip(poiFragData.alpha - (0.5 /*_Cutoff*/));
-				if ((1.0 /*_Mode*/) == POI_MODE_CUTOUT && !(0.0 /*_AlphaToCoverage*/))
+				if ((0.0 /*_Mode*/) == POI_MODE_CUTOUT && !(0.0 /*_AlphaToCoverage*/))
 				{
 					poiFragData.alpha = 1;
 				}
@@ -9836,7 +9839,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
 				{
 					poiFragData.alpha = saturate(poiFragData.alpha * (10.0 /*_AlphaBoostFA*/));
 				}
-				if ((1.0 /*_Mode*/) != POI_MODE_TRANSPARENT)
+				if ((0.0 /*_Mode*/) != POI_MODE_TRANSPARENT)
 				{
 					poiFragData.finalColor *= poiFragData.alpha;
 				}
@@ -9876,6 +9879,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
  #define VIGNETTE_MASKED 
  #define _LIGHTINGMODE_FLAT 
  #define _STOCHASTICMODE_DELIOT_HEITZ 
+ #define PROP_CLIPPINGMASK 
  #define PROP_DECALTEXTURE 
  #define PROP_DECALTEXTURE1 
  #define PROP_DECALTEXTURE2 
@@ -11394,7 +11398,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
 			#endif // defined(_STOCHASTICMODE_HEXTILE)
 			void applyAlphaOptions(inout PoiFragData poiFragData, in PoiMesh poiMesh, in PoiCam poiCam, in PoiMods poiMods)
 			{
-				poiFragData.alpha = saturate(poiFragData.alpha + (0.0 /*_AlphaMod*/));
+				poiFragData.alpha = saturate(poiFragData.alpha + _AlphaMod);
 				if ((0.0 /*_AlphaGlobalMask*/) > 0)
 				{
 					poiFragData.alpha = customBlend(poiFragData.alpha, poiMods.globalMask[(0.0 /*_AlphaGlobalMask*/)-1], (2.0 /*_AlphaGlobalMaskBlendType*/));
@@ -11602,7 +11606,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/ce48d4d7b150b1b4
 					UNITY_APPLY_FOG(i.fogCoord, poiFragData.finalColor);
 				}
 				poiFragData.alpha = (0.0 /*_AlphaForceOpaque*/) ? 1 : poiFragData.alpha;
-				if ((1.0 /*_Mode*/) == POI_MODE_OPAQUE)
+				if ((0.0 /*_Mode*/) == POI_MODE_OPAQUE)
 				{
 					poiFragData.alpha = 1;
 				}
