@@ -1975,7 +1975,7 @@ Material:
     - _Matcap1NormalMapScale: 1
     - _Matcap1NormalMapUV: 0
     - _Matcap2Add: 0
-    - _Matcap2AddToLight: 0.05
+    - _Matcap2AddToLight: 0.01
     - _Matcap2AlphaOverride: 0
     - _Matcap2BaseColorMix: 0
     - _Matcap2Border: 0.43
@@ -1995,7 +1995,7 @@ Material:
     - _Matcap2MaskSmoothnessApply: 0
     - _Matcap2MaskSmoothnessChannel: 3
     - _Matcap2MaskUV: 0
-    - _Matcap2Mixed: 0.274
+    - _Matcap2Mixed: 0.1
     - _Matcap2Multiply: 0
     - _Matcap2Normal: 1
     - _Matcap2NormalMapScale: 1
@@ -2492,7 +2492,7 @@ Material:
     - _SSSThicknessMapUV: 0
     - _SSSThicknessMod: 0
     - _SampleWorld: 0
-    - _Saturation: 0
+    - _Saturation: -1
     - _Saturation_Cat: 0
     - _ScrollingEmission: 0
     - _ScrollingEmission1: 0

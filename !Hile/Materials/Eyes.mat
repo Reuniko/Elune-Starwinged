@@ -1714,7 +1714,7 @@ Material:
     - _MainHueShiftReplace: 1
     - _MainHueShiftSpeed: 0
     - _MainHueShiftToggle: 1
-    - _MainHueShift_Eyes: 0
+    - _MainHueShift_Eyes: 0.858
     - _MainPixelMode: 0
     - _MainSaturationGlobalMask: 0
     - _MainSaturationGlobalMaskBlendType: 2

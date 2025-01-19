@@ -2762,7 +2762,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/4a8cc301c1077fe4d8c36274a
 				{
 					matcap2.rgb = hueShift(matcap2.rgb, (0.0 /*_Matcap2HueShift*/) + _Time.x * (0.0 /*_Matcap2HueShiftSpeed*/));
 				}
-				blendMatcap(poiLight, poiFragData, poiMods, (0.0 /*_Matcap2Add*/), (0.05 /*_Matcap2AddToLight*/), (0.0 /*_Matcap2Multiply*/), (0.0 /*_Matcap2Replace*/), (0.274 /*_Matcap2Mixed*/), matcap2, matcap2Mask, (0.0 /*_Matcap2EmissionStrength*/), (0.0 /*_Matcap2LightMask*/), (0.0 /*_Matcap2MaskGlobalMask*/), (2.0 /*_Matcap2MaskGlobalMaskBlendType*/));
+				blendMatcap(poiLight, poiFragData, poiMods, (0.0 /*_Matcap2Add*/), (0.01 /*_Matcap2AddToLight*/), (0.0 /*_Matcap2Multiply*/), (0.0 /*_Matcap2Replace*/), (0.1 /*_Matcap2Mixed*/), matcap2, matcap2Mask, (0.0 /*_Matcap2EmissionStrength*/), (0.0 /*_Matcap2LightMask*/), (0.0 /*_Matcap2MaskGlobalMask*/), (2.0 /*_Matcap2MaskGlobalMaskBlendType*/));
 				#endif
 			}
 			#endif
@@ -5763,7 +5763,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/4a8cc301c1077fe4d8c36274a
 				{
 					matcap2.rgb = hueShift(matcap2.rgb, (0.0 /*_Matcap2HueShift*/) + _Time.x * (0.0 /*_Matcap2HueShiftSpeed*/));
 				}
-				blendMatcap(poiLight, poiFragData, poiMods, (0.0 /*_Matcap2Add*/), (0.05 /*_Matcap2AddToLight*/), (0.0 /*_Matcap2Multiply*/), (0.0 /*_Matcap2Replace*/), (0.274 /*_Matcap2Mixed*/), matcap2, matcap2Mask, (0.0 /*_Matcap2EmissionStrength*/), (0.0 /*_Matcap2LightMask*/), (0.0 /*_Matcap2MaskGlobalMask*/), (2.0 /*_Matcap2MaskGlobalMaskBlendType*/));
+				blendMatcap(poiLight, poiFragData, poiMods, (0.0 /*_Matcap2Add*/), (0.01 /*_Matcap2AddToLight*/), (0.0 /*_Matcap2Multiply*/), (0.0 /*_Matcap2Replace*/), (0.1 /*_Matcap2Mixed*/), matcap2, matcap2Mask, (0.0 /*_Matcap2EmissionStrength*/), (0.0 /*_Matcap2LightMask*/), (0.0 /*_Matcap2MaskGlobalMask*/), (2.0 /*_Matcap2MaskGlobalMaskBlendType*/));
 				#endif
 			}
 			#endif

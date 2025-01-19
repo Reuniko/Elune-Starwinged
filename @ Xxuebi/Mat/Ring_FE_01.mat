@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ring_FE_01
+  m_Shader: {fileID: 4800000, guid: bfaed242dca8f5e4387c0adc62f51093, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Fre_Tex:
+        m_Texture: {fileID: 2800000, guid: f00e90e9a7d9431448c952d9020b0776, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Main_Tex:
+        m_Texture: {fileID: 2800000, guid: f00e90e9a7d9431448c952d9020b0776, type: 3}
+        m_Scale: {x: 3, y: 0.6}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_01:
+        m_Texture: {fileID: 2800000, guid: 8de25b8e74a375d4591062842a707dce, type: 3}
+        m_Scale: {x: 6, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask_02:
+        m_Texture: {fileID: 2800000, guid: f00e90e9a7d9431448c952d9020b0776, type: 3}
+        m_Scale: {x: 3, y: 0.6}
+        m_Offset: {x: 0, y: 0}
+    - _Noise_Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Tex_Main:
+        m_Texture: {fileID: 2800000, guid: 363ea097febd5b143a0f3929541d637f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ver_Mask:
+        m_Texture: {fileID: 2800000, guid: 1f5e9dca855cb83489476c7675a0b815, type: 3}
+        m_Scale: {x: -0.98, y: 1}
+        m_Offset: {x: -0.002, y: 0}
+    - _Ver_Mask2_Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ver_Mask_Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ver_Tex:
+        m_Texture: {fileID: 2800000, guid: 66dabe2f4d8fe0a4191c8e1c97c03c5b, type: 3}
+        m_Scale: {x: 0.3, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Fre_Bias: 0
+    - _Fre_Int: 0
+    - _Fre_Power: 0
+    - _Fre_Scale: 0
+    - _Fre_U: 0
+    - _Fre_V: 0
+    - _Main_Int: 1
+    - _Main_U: 0.2
+    - _Main_V: -0.4
+    - _Mask1_U: 0.3
+    - _Mask1_V: 0
+    - _Mask2_U: 0.1
+    - _Mask2_V: -0.2
+    - _Mask_01_Int: 3
+    - _Noise_Int: 0
+    - _Noise_U: 0
+    - _Noise_V: 0
+    - _Ver_Int: 0.04
+    - _Ver_M2U: 0
+    - _Ver_M2_V: 0
+    - _Ver_M_U: 0
+    - _Ver_M_V: 0
+    - _Ver_Min: -1
+    - _Ver_U: 0
+    - _Ver_V: 0
+    m_Colors:
+    - _Color0: {r: 1, g: 1, b: 1, a: 1}
+    - _F_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _M_Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Main_Color: {r: 5.992157, g: 5.992157, b: 5.992157, a: 1}
+    - _Ver_Int: {r: 0, g: 0, b: 0, a: 0}
+    - _Ver_Tex_UV: {r: 1, g: 0, b: 0, a: 0}
+    - _Ver_UV_Speed: {r: 3, g: 0, b: -1, a: 0}
