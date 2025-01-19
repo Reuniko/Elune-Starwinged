@@ -211,12 +211,12 @@ MonoBehaviour:
   - name: HairEmiss
     valueType: 1
     saved: 1
-    defaultValue: 0.5
+    defaultValue: 0
     networkSynced: 1
   - name: FluffGlitter
     valueType: 2
     saved: 1
-    defaultValue: 1
+    defaultValue: 0
     networkSynced: 1
   - name: Go/PoseRadial
     valueType: 1
@@ -397,4 +397,9 @@ MonoBehaviour:
     valueType: 2
     saved: 1
     defaultValue: 0
+    networkSynced: 1
+  - name: Halo
+    valueType: 2
+    saved: 1
+    defaultValue: 1
     networkSynced: 1

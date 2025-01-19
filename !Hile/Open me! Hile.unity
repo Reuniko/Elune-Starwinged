@@ -42779,6 +42779,10 @@ MonoBehaviour:
     name: Curse_Off
   - hash: -824335208
     name: Curse_On
+  - hash: 2056418401
+    name: Off
+  - hash: -107007495
+    name: On
   autoFootsteps: 1
   autoLocomotion: 0
   collider_head:
