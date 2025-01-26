@@ -87,7 +87,7 @@ MonoBehaviour:
     icon: {fileID: 0}
     type: 102
     parameter:
-      name: Halo
+      name: HaloSys/Enable
     value: 1
     style: 0
     subMenu: {fileID: 0}
