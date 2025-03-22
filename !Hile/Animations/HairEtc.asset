@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: HairEtc
   m_EditorClassIdentifier: 
   controls:
-  - name: Long Hair
+  - name: HairVariants
     icon: {fileID: 2800000, guid: c6de8348ddd2d954b93896256826ca71, type: 3}
-    type: 102
+    type: 203
     parameter:
-      name: HairSwap
+      name: 
     value: 1
     style: 0
     subMenu: {fileID: 0}
-    subParameters: []
+    subParameters:
+    - name: HairVariants
     labels: []
   - name: Chest
     icon: {fileID: 2800000, guid: 3f3f9c2045a136c4ba711474e4a02924, type: 3}
