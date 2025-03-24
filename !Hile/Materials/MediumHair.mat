@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Hair
-  m_Shader: {fileID: 4800000, guid: c1d0ef6b67e0f9f4ca6062c8f4c7ac45, type: 3}
+  m_Name: MediumHair
+  m_Shader: {fileID: 4800000, guid: 6f5106705a7ca744d9663b9704481b18, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -29,7 +29,7 @@ Material:
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
-    AllLockedGUIDS: 987c305d972e58040a4715f81f1984a6
+    AllLockedGUIDS: e2ac5fb920f30934a92e8940ba22e7de
     OriginalKeywords: COLOR_GRADING_HDR MOCHIE_PBR POI_ENVIRORIM POI_MATCAP0 VIGNETTE_MASKED
       _EMISSION _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
       _SUNDISK_SIMPLE
@@ -334,7 +334,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bb281ca0f554dc54c9f3179f10bf1645, type: 3}
+        m_Texture: {fileID: 2800000, guid: c95f93d940968cb4c8c3fe02c67a23e2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
@@ -1193,7 +1193,7 @@ Material:
     - _EmissionScrollingVertexColor1: 0
     - _EmissionScrollingVertexColor2: 0
     - _EmissionScrollingVertexColor3: 0
-    - _EmissionStrength: 0.41
+    - _EmissionStrength: 1.38
     - _EmissionStrength1: 0
     - _EmissionStrength2: 0
     - _EmissionStrength3: 0
