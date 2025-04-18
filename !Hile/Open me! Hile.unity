@@ -1417,10 +1417,10 @@ MonoBehaviour:
   foldout_gizmos: 0
   version: 0
   integrationType: 1
-  rootTransform: {fileID: 942979576}
+  rootTransform: {fileID: 0}
   ignoreTransforms: []
   endpointPosition: {x: 0, y: 0, z: 0}
-  multiChildType: 0
+  multiChildType: 1
   pull: 0.145
   pullCurve:
     serializedVersion: 2
@@ -1468,7 +1468,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
-  radius: 0.023287863
+  radius: 0.02328785
   radiusCurve:
     serializedVersion: 2
     m_Curve: []
@@ -34597,10 +34597,10 @@ MonoBehaviour:
   foldout_gizmos: 0
   version: 0
   integrationType: 1
-  rootTransform: {fileID: 942979576}
+  rootTransform: {fileID: 0}
   ignoreTransforms: []
   endpointPosition: {x: 0, y: 0, z: 0}
-  multiChildType: 0
+  multiChildType: 1
   pull: 0.145
   pullCurve:
     serializedVersion: 2
@@ -34648,7 +34648,7 @@ MonoBehaviour:
   collisionFilter:
     allowSelf: 1
     allowOthers: 1
-  radius: 0.023287853
+  radius: 0.02328785
   radiusCurve:
     serializedVersion: 2
     m_Curve: []
