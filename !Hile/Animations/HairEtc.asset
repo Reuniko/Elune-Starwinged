@@ -86,3 +86,14 @@ MonoBehaviour:
     subMenu: {fileID: 11400000, guid: 11ce1029baeb42b4f85a403b6288ee9f, type: 2}
     subParameters: []
     labels: []
+  - name: ClothVariants
+    icon: {fileID: 0}
+    type: 203
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: ClothVariants
+    labels: []

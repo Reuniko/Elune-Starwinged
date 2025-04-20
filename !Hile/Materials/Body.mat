@@ -2505,7 +2505,7 @@ Material:
     - g_start_deliot: 0
     - g_start_hextile: 0
     - m_AudioLinkCategory: 0
-    - m_OutlineCategory: 0
+    - m_OutlineCategory: 1
     - m_end_ALDecalSpectrum: 0
     - m_end_ALVolumeColor: 0
     - m_end_Alpha: 0
@@ -2666,7 +2666,7 @@ Material:
     - m_start_Decal2AudioLink: 0
     - m_start_Decal3: 1
     - m_start_Decal3AudioLink: 0
-    - m_start_DecalSection: 0
+    - m_start_DecalSection: 1
     - m_start_DepthBulge: 0
     - m_start_DetailOptions: 0
     - m_start_DistortionAudioLink: 0
@@ -2760,7 +2760,7 @@ Material:
     - m_start_flipBook: 0
     - m_start_glitter: 0
     - m_start_internalparallax: 0
-    - m_start_matcap: 1
+    - m_start_matcap: 0
     - m_start_mirrorOptions: 0
     - m_start_normalCorrect: 0
     - m_start_outlineAdvanced: 0
@@ -2769,7 +2769,7 @@ Material:
     - m_start_pathing: 0
     - m_start_pointToPoint: 0
     - m_start_postprocess: 0
-    - m_start_reflectionRim: 1
+    - m_start_reflectionRim: 0
     - m_start_rgbanormals: 0
     - m_start_rim2LightOptions: 0
     - m_start_rimLight1Options: 0
