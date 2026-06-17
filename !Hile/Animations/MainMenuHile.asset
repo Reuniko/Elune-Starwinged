@@ -63,14 +63,14 @@ MonoBehaviour:
       icon: {fileID: 0}
     - name: 
       icon: {fileID: 0}
-  - name: Accessories
-    icon: {fileID: 2800000, guid: b314deb634940d34b99cf67fa88320a8, type: 3}
-    type: 103
+  - name: Marker
+    icon: {fileID: 0}
+    type: 102
     parameter:
-      name: 
-    value: 0
+      name: Marker
+    value: 1
     style: 0
-    subMenu: {fileID: 11400000, guid: 3b77fddbb22152247b3b2d3e5a8486f1, type: 2}
+    subMenu: {fileID: 0}
     subParameters: []
     labels: []
   - name: Species
